@@ -2,7 +2,7 @@ import UIKit
 
 //임시로 만듦, 내용 보완 필요
 
-
+//플레이어 능력. 순진한 얼굴, 리트리버, 웅변, 교섭, 능숙한 거짓말, 요리 실력, 철학, 영어 등등등등등
 enum Ability {
     case liar
 }
@@ -47,6 +47,7 @@ struct StoryPage {
     var storyText: String
     var storyImage: String?
     var choice1: Choice
+    // 선택지가 최소 1개, 최대 3개라 일단 이렇게 함.
     var choice2: Choice?
     var choice3: Choice?
     
