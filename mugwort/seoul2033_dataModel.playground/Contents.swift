@@ -6,6 +6,8 @@ import UIKit
 //플레이어 능력. 순진한 얼굴, 리트리버, 웅변, 교섭, 능숙한 거짓말, 요리 실력, 철학, 영어 등등등등등
 enum Ability {
     case liar
+    case 순진한 얼굴
+    
 }
 
 //게임 캐릭터. 플레이 시작 시 생성, 죽으면 삭제
@@ -13,7 +15,7 @@ struct GameCharacter {
     var health: Int
     var mental: Int
     var money: Int
-    var ability:Ability?
+    var ability:[Ability?]
     var currentPage: Int
     
 }
