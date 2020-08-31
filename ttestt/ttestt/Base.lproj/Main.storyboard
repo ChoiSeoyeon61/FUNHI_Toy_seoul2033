@@ -37,13 +37,13 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="ttestt" customModuleProvider="target" sceneMemberID="viewController">
-                    <button key="view" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="esB-vg-4C2">
+                    <arView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Eom-ja-BhH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
-                    </button>
+                    </arView>
                     <navigationItem key="navigationItem" id="Kzt-bz-51Q"/>
                     <connections>
+                        <outlet property="arView" destination="Eom-ja-BhH" id="e5d-kJ-toV"/>
                         <segue destination="feQ-3U-wVw" kind="show" identifier="goToVC" id="l2z-q9-VjP"/>
                     </connections>
                 </viewController>
