@@ -6,7 +6,6 @@ import UIKit
 //플레이어 능력. 순진한 얼굴, 리트리버, 웅변, 교섭, 능숙한 거짓말, 요리 실력, 철학, 영어 등등등등등
 enum Ability {
     case liar
-    case 순진한 얼굴
 
 }
 
@@ -27,8 +26,21 @@ struct User {
     var cookie: Int
     var maxPage: Int
     var maxAbility: Int
+    let setting : Setting
+}
+struct Setting{
+    var isVibrate : Bool = true
+    var fontSize : Int = 15
+    var rowSpacig : Int = 28
 }
 
+struct FullStory {
+    var fullstory : Array = [Episode]()
+}
+
+struct Episode {
+    var episode : Array = [Page]()
+}
 // 아래 StoryPage(페이지별 스토리 텍스트) 각각에 들어가는 선택지에 대한 정보 스트럭처. 선택지에 따라 바뀔 수 있는 플레이어의 정보[선택지 문장, 플레이어 능력, 체력, 멘탈, 돈]들을 해당 스트럭처 안에 담아놓음.
 struct Choice {
     var choiceText: String
@@ -46,7 +58,7 @@ struct Choice {
 }
 
 // 게임 플레이시 나오는 텍스트 페이지 각각에 대한 스트럭처. 텍스트, 이미지(있을 수도 없을 수도 이씀.), 선택지(최대 3개) 로 구성
-struct StoryPage {
+struct Page {
     var index: Int
     var storyText: String
     var storyImage: String?
@@ -63,10 +75,6 @@ var santaCharactor1: GameCharacter = GameCharacter(health: 3, mental: 3, money: 
 // 유저 인스턴스
 var santa:User = User(gameCharacter:santaCharactor1, totalDying: 0, cookie: 0, maxPage: 0, maxAbility: 0)
 
-
-if current.stroypage[number].choice1.ability == nil {
-
-}
 
 // 게임 처음 시작 페이지 4p 구현해봄
 let ep1:[StoryPage] = [
