@@ -53,6 +53,8 @@ struct Choice {
     var mentalGive: Bool
     var money: Int
     var moneyGive: Bool
+    var needAbility: Ability?
+    var nextPageIndex: Int
 
 
 }
