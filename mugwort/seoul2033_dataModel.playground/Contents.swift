@@ -16,6 +16,7 @@ struct GameCharacter {
     var money: Int
     var ability:[Ability?]
     var currentPage: Int
+    var currentEpisode : Episode
 
 }
 
@@ -54,10 +55,34 @@ struct Choice {
     var money: Int
     var moneyGive: Bool
     var needAbility: Ability?
-    var nextPageIndex: Int
-
-
+    var nextPageIndex: Int{
+        get{
+            return 0
+        }
+        //튜토리얼에서 무작위 수 받기
+        set(nextPageIndex){
+            if currentPage == 3 || 5{
+                let num = Int.random(in: 0...3)
+                return num
+            } else if endEpisodeNumber == 666{.    //에피소드의 끝이 확인되었을 때, 다음 에피소드를 무작위로 선정하기
+                let num = Int.random(in: 0...4)
+                return num
+                endEpisodeNumber = 0
+            }
+        }
+    }
 }
+//다음 페이지로 넘길 때마다 실행되는 함수
+func pageUpdate(){
+    //현재 페이지가 에피소드의 마지막인지를 확인하기
+    let arrayLast = episode.last!
+    if arrayLast == currentEpisode{
+        endEpisodeNumber = 666          //맞다면 666을 주기
+    }
+}
+//튜토리얼에서 무작위로 주어지는 능력을 받는 스토리를 정리하는 페이지
+var abilityPage : Array = [Page]()
+abilityPage = []
 
 // 게임 플레이시 나오는 텍스트 페이지 각각에 대한 스트럭처. 텍스트, 이미지(있을 수도 없을 수도 이씀.), 선택지(최대 3개) 로 구성
 struct Page {
@@ -68,6 +93,9 @@ struct Page {
     // 선택지가 최소 1개, 최대 3개라 일단 이렇게 함.
     var choice2: Choice?
     var choice3: Choice?
+    
+    //특정 숫자
+    var endEpisodeNumber = 0
 
 }
 //--------------------------------여기부터 인스턴스---------------------------------------
