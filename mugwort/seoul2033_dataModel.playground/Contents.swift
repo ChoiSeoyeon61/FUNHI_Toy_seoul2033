@@ -59,7 +59,7 @@ struct Choice {
     }
 func getRandomNumber(){
 //튜토리얼에서 무작위 수 받기
-    if currentPage == 3 || 5{
+    if currentPage == 3 || 5 {
         let num = Int.random(in: 0...3)
         nextPageIndex = num
     } else if endEpisodeNumber == 666{    //에피소드의 끝이 확인되었을 때, 다음 에피소드를 무작위로 선정하기
