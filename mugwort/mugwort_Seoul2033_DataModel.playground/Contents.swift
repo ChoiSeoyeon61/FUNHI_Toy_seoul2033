@@ -45,22 +45,10 @@ struct FullStory {
 }
 
 struct Episode {
-    var episode : Array = [Any]()
+    var episode : Array = [Page]()
 }
 // 아래 StoryPage(페이지별 스토리 텍스트) 각각에 들어가는 선택지에 대한 정보 스트럭처. 선택지에 따라 바뀔 수 있는 플레이어의 정보[선택지 문장, 플레이어 능력, 체력, 멘탈, 돈]들을 해당 스트럭처 안에 담아놓음.
-struct Choice {
-    var choiceText: String
-    var ability: Ability?
-    var abilityGive: Bool
-    var health: Int
-       //~Give는 해당 항목을 줄 건지, 뺏을 건지에 대한 정보. healthGive: true이면 +health / healthGive: false 이면 -health
-    var healthGive: Bool
-    var mental: Int
-    var mentalGive: Bool
-    var money: Int
-    var moneyGive: Bool
-    var needAbility: Ability?
-    let nextPageIndex: Int
+
 //    {
 //        get{
 //            return 0
@@ -77,25 +65,34 @@ struct Choice {
 //            }
 //        }
 //    }
-}
-//다음 페이지로 넘길 때마다 실행되는 함수
-func pageUpdate(){
-    //현재 페이지가 에피소드의 마지막인지를 확인하기
-    let arrayLast = episode.last!
-    if arrayLast == currentEpisode{
-        endEpisodeNumber = 666          //맞다면 666을 주기
-    }
-}
+
 //튜토리얼에서 무작위로 주어지는 능력을 받는 스토리를 정리하는 페이지
-var abilityPage : Array = [Page]()
-abilityPage = []
+let abilityPage : Episode = []
 
 // 게임 플레이시 나오는 텍스트 페이지 각각에 대한 스트럭처. 텍스트, 이미지(있을 수도 없을 수도 이씀.), 선택지(최대 3개) 로 구성
 struct Page {
+    
+    struct Choice {
+       var choiceText: String
+       var ability: Ability?
+       var abilityGive: Bool
+       var health: Int
+          //~Give는 해당 항목을 줄 건지, 뺏을 건지에 대한 정보. healthGive: true이면 +health / healthGive: false 이면 -health
+       var healthGive: Bool
+       var mental: Int
+       var mentalGive: Bool
+       var money: Int
+       var moneyGive: Bool
+       var needAbility: Ability?
+       let nextPageIndex: Int
+        
     let index: Int
     let storyText: String
     let storyImage: String?
-    let choice: Array = [Choice]()
+    var choice: Array = [Choice]()
+    
+  
+    }
     // 선택지가 최소 1개, 최대 3개라 일단 이렇게 함.
   
     
