@@ -139,30 +139,31 @@ var truckSaleEP: Episode = Episode(episode: [
     
     //선택지 둘러본다
     Page(index: 1, storyText: "둘러보니 별로 쓸모 있어 보이는 물건은 많지 않습니다. \"마음껏 둘러보십시오. 물건은 매번 바뀌니 언제든 또 찾아주시고요.\"", storyImage: nil, choice: [
-        Choice(choiceText: "살충제", ability: [.insecticide], abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 1, moneyGive: false, needAbility: nil, nextPageIndex: 2),
-        Choice(choiceText: "붕대와 부목", ability: [.bandage, .splint], abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 1, moneyGive: false, needAbility: nil, nextPageIndex: 3),
-        Choice(choiceText: "<스피치로 승부하라>", ability: [.book_speech], abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 1, moneyGive: false, needAbility: nil, nextPageIndex: 4),
-        Choice(choiceText: "떠난다", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 5)
+            Choice(choiceText: "살충제", ability: [.insecticide], abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 1, moneyGive: false, needAbility: nil, nextPageIndex: 2),
+            Choice(choiceText: "붕대와 부목", ability: [.bandage, .splint], abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 1, moneyGive: false, needAbility: nil, nextPageIndex: 3),
+            Choice(choiceText: "<스피치로 승부하라>", ability: [.book_speech], abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 1, moneyGive: false, needAbility: nil, nextPageIndex: 4),
+            Choice(choiceText: "떠난다", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 5)
     ], endEpisodeNumber: 0),
     
     Page(index: 1, storyText: "살충제를 구매했습니다.", storyImage: nil, choice: [
         Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
+
     ], endEpisodeNumber: 0),
     
     Page(index: 1, storyText: "붕대와 부목을 구매했습니다.", storyImage: nil, choice: [
-        Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
+            Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
     ], endEpisodeNumber: 0),
     
     Page(index: 1, storyText: "<스피치로 승부하라>를 구매했습니다", storyImage: nil, choice: [
-        Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
+            Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
     ], endEpisodeNumber: 666),
     
     Page(index: 1, storyText: "여기엔 별로 살 만한 물건이 없는 듯 합니다. 당신은 물건을 구매하지 않고 트럭을 돌아섭니다.", storyImage: nil, choice: [
-        Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
+            Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
     ], endEpisodeNumber: 666),
 //선택지 그냥 간다
     Page(index: 1, storyText: "당신은 발걸음을 돌립니다.", storyImage: nil, choice: [
-        Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
+            Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
     ], endEpisodeNumber: 666)
     
 ]
