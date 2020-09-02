@@ -102,7 +102,8 @@ var santa:User = User(gameCharacter:santaCharactor1, totalDying: 0, cookie: 0, m
 //튜토리얼에서 무작위로 주어지는 능력을 받는 스토리를 정리하는 페이지
 let abilityPage : [Page] = [
     Page(index: 1, storyText: "당신은 마을의 엄청난 말썽꾸러기이자 골목대장이었어요. 산 곳곳을 매일 뛰어다니고 온갖 사고를 치고 다녔고, 가끔씩 애들을 이끌고 다른 골목 아이들과 쌈박질을 하곤 했어요. 리더로 산다는 것은 확실히 피곤한 일이긴 하지만.. 뭐, 당신은 그걸 꽤 좋아했던 것 같네요. 나이 먹으면서 더 이상 그런 짓들은 안 하지만 당신은 여전히 마을 아이들의 우상입니다. ", choice1: Choice(choiceText: "그렇군요! 또 뭐 없나요?", abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true)),
-    Page(index: 2, storyText: "아, 그리고 당신은 영어를 할 줄 알아요! 이 마을에도 아이들을 위한 학교는 있는데, 선생님께서 영어를 가르쳐야 하나 말아야 하나 무척 고민이 깊으셨다고 해요. 사실 한국 교육과정이란게 영어가 필수긴 한데, 수능도 토익도 없어진 마당에 영어를 꼭 가르쳐야 할까요? 그런데 우연히 당신이 큰 관심을 가지는 것을 보고 당신에게만 개인 과외를 해주셨죠. 쓸모 있는 지식인진 정말 모르겠네요. ", choice1: Choice(choiceText: "그나저나, 당신은 누구죠?", abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true))
+    Page(index: 2, storyText: "아, 그리고 당신은 영어를 할 줄 알아요! 이 마을에도 아이들을 위한 학교는 있는데, 선생님께서 영어를 가르쳐야 하나 말아야 하나 무척 고민이 깊으셨다고 해요. 사실 한국 교육과정이란게 영어가 필수긴 한데, 수능도 토익도 없어진 마당에 영어를 꼭 가르쳐야 할까요? 그런데 우연히 당신이 큰 관심을 가지는 것을 보고 당신에게만 개인 과외를 해주셨죠. 쓸모 있는 지식인진 정말 모르겠네요. ", choice: Choice(choiceText: "그나저나, 당신은 누구죠?", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 0)),
+    Page(index: 3, storyText: "안녕", storyImage: nil, choice: Choice(choiceText: <#T##String#>, ability: <#T##Ability?#>, abilityGive: <#T##Bool#>, health: <#T##Int#>, healthGive: <#T##Bool#>, mental: <#T##Int#>, mentalGive: <#T##Bool#>, money: <#T##Int#>, moneyGive: <#T##Bool#>, needAbility: <#T##Ability?#>, nextPageIndex: <#T##Int#>), endEpisodeNumber: <#T##Int#>)
 ]
 
 // 게임 처음 시작 페이지 4p 구현해봄
