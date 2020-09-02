@@ -45,7 +45,7 @@ struct FullStory {
 }
 
 struct Episode {
-    var episode : Array = [Any]()
+    var episode : Array = [Page]()
 }
 // 아래 StoryPage(페이지별 스토리 텍스트) 각각에 들어가는 선택지에 대한 정보 스트럭처. 선택지에 따라 바뀔 수 있는 플레이어의 정보[선택지 문장, 플레이어 능력, 체력, 멘탈, 돈]들을 해당 스트럭처 안에 담아놓음.
 
@@ -67,8 +67,7 @@ struct Episode {
 //    }
 
 //튜토리얼에서 무작위로 주어지는 능력을 받는 스토리를 정리하는 페이지
-var abilityPage : Array = [Page]()
-abilityPage = []
+let abilityPage : Episode = []
 
 // 게임 플레이시 나오는 텍스트 페이지 각각에 대한 스트럭처. 텍스트, 이미지(있을 수도 없을 수도 이씀.), 선택지(최대 3개) 로 구성
 struct Page {
@@ -90,7 +89,7 @@ struct Page {
     let index: Int
     let storyText: String
     let storyImage: String?
-    let choice: Array = [Choice]()
+    var choice: Array = [Choice]()
     
   
     }
@@ -112,7 +111,7 @@ var santa:User = User(gameCharacter:santaCharactor1, totalDying: 0, cookie: 0, m
 
 
 
-var epWood:Episode = Episode[
+var epWood: Array = Episode[
 
     Page(index: 1, storyText: "무너진 목자재 아래에 긴급 구호 물품 상자가 깔려 있는 것이 보입니다! 저것들만 치우면 꺼낼 수 있겠는데요, 생각보다 무거워 보여서 자칫 잘못했다간 허리만 나갈 것 같습니다. ", storyImage: nil, choice: [
         Choice(choiceText: "목자재를 치운다", ability: nil, abilityGive: true, health: 1, healthGive: false, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 1),
