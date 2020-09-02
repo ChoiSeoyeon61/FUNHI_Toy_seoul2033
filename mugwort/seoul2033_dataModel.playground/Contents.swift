@@ -84,10 +84,9 @@ struct Page {
     var index: Int
     var storyText: String
     var storyImage: String?
-    var choice1: Choice
+    var choice  Array = [Choice]()
     // 선택지가 최소 1개, 최대 3개라 일단 이렇게 함.
-    var choice2: Choice?
-    var choice3: Choice?
+  
     
     //특정 숫자
     var endEpisodeNumber = 0
