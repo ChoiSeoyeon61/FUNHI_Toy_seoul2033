@@ -11,6 +11,10 @@ import UIKit
 //플레이어 능력. 순진한 얼굴, 리트리버, 웅변, 교섭, 능숙한 거짓말, 요리 실력, 철학, 영어 등등등등등
 enum Ability {
     case liar
+    case insecticide
+    case bandage
+    case splint
+    case book_speech
 
 }
 
@@ -66,35 +70,34 @@ struct Episode {
 //        }
 //    }
 
-//튜토리얼에서 무작위로 주어지는 능력을 받는 스토리를 정리하는 페이지
-let abilityPage : Episode = []
-
+//튜토리얼에서 무작위로 주어지는 능력을 받는
+struct Choice {
+      var choiceText: String
+      var ability: [Ability]?
+      var abilityGive: Bool
+      var health: Int
+         //~Give는 해당 항목을 줄 건지, 뺏을 건지에 대한 정보. healthGive: true이면 +health / healthGive: false 이면 -health
+      var healthGive: Bool
+      var mental: Int
+      var mentalGive: Bool
+      var money: Int
+      var moneyGive: Bool
+      var needAbility: Ability?
+      let nextPageIndex: Int
+       
+  
+ 
+   }
 // 게임 플레이시 나오는 텍스트 페이지 각각에 대한 스트럭처. 텍스트, 이미지(있을 수도 없을 수도 이씀.), 선택지(최대 3개) 로 구성
 struct Page {
     
-    struct Choice {
-       var choiceText: String
-       var ability: Ability?
-       var abilityGive: Bool
-       var health: Int
-          //~Give는 해당 항목을 줄 건지, 뺏을 건지에 대한 정보. healthGive: true이면 +health / healthGive: false 이면 -health
-       var healthGive: Bool
-       var mental: Int
-       var mentalGive: Bool
-       var money: Int
-       var moneyGive: Bool
-       var needAbility: Ability?
-       let nextPageIndex: Int
-        
-    let index: Int
-    let storyText: String
-    let storyImage: String?
-    var choice: Array = [Choice]()
-    
-  
-    }
+   
     // 선택지가 최소 1개, 최대 3개라 일단 이렇게 함.
-  
+  let index: Int
+     let storyText: String
+     let storyImage: String?
+     var choice: Array = [Choice]()
+     
     
     //특정 숫자
     var endEpisodeNumber = 0
@@ -111,15 +114,57 @@ var santa:User = User(gameCharacter:santaCharactor1, totalDying: 0, cookie: 0, m
 
 
 
-var epWood: Array = Episode[
-
-    Page(index: 1, storyText: "무너진 목자재 아래에 긴급 구호 물품 상자가 깔려 있는 것이 보입니다! 저것들만 치우면 꺼낼 수 있겠는데요, 생각보다 무거워 보여서 자칫 잘못했다간 허리만 나갈 것 같습니다. ", storyImage: nil, choice: [
-        Choice(choiceText: "목자재를 치운다", ability: nil, abilityGive: true, health: 1, healthGive: false, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 1),
-        Choice(choiceText: "그냥 간다", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil,nextPageIndex: 2)
-    ], endEpisodeNumber: 1),
+var woodEP: Episode = Episode(episode: [
     
-    Page(index: 1, storyText: "운동을 좀 헤둘 걸 그랬나요? 당신은 낑낑대며 목재 더미와 씨름하다가 그만 힘을 잘못 줘서 허리에 큰 부담이 오고 말았습니다. 한동안 걷기 힘들 정도로 고통이 상당합니다. 당신은 나무 더미를 향해 저주를 퍼붓다가 이내 포기합니다..", storyImage: nil, choice: [
+        Page(index: 1, storyText: "무너진 목자재 아래에 긴급 구호 물품 상자가 깔려 있는 것이 보입니다! 저것들만 치우면 꺼낼 수 있겠는데요, 생각보다 무거워 보여서 자칫 잘못했다간 허리만 나갈 것 같습니다. ", storyImage: nil, choice: [
+                  Choice(choiceText: "목자재를 치운다", ability: nil, abilityGive: true, health: 1, healthGive: false, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 1),
+                  Choice(choiceText: "그냥 간다", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil,nextPageIndex: 2)
+            ], endEpisodeNumber: 1),
+      
+        Page(index: 1, storyText: "운동을 좀 헤둘 걸 그랬나요? 당신은 낑낑대며 목재 더미와 씨름하다가 그만 힘을 잘못 줘서 허리에 큰 부담이 오고 말았습니다. 한동안 걷기 힘들 정도로 고통이 상당합니다. 당신은 나무 더미를 향해 저주를 퍼붓다가 이내 포기합니다..", storyImage: nil, choice: [
+          Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
+        ], endEpisodeNumber: 666),
+        
+        Page(index: 1, storyText: "당신은 발걸음을 돌립니다.", storyImage: nil, choice: [
+            Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
+        ], endEpisodeNumber: 666)
+])
+
+var truckSaleEP: Episode = Episode(episode: [
+    
+    Page(index: 1, storyText: "당신은 길을 걷다가 파란 용달 트럭이 천천히 다가오는 것을 발견합니다. 트럭 짐칸엔 잡동사니가 가득 실려 있고, 활과 창으로 무장한 경호원 셋이 함께 타고 있습니다, 당신 앞에서 조수석 유리창이 내려가더니, 인상 좋은 남자 둘이 자신들을 서울역에서 온 상인이라고 소개하며 당신에게 가까이 와서 물건을 둘러보라고 합니다.", storyImage: nil, choice: [
+            Choice(choiceText: "둘러본다", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 1),
+            Choice(choiceText: "그냥 간다", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 6)
+    ], endEpisodeNumber: 0),
+    
+    //선택지 둘러본다
+    Page(index: 1, storyText: "둘러보니 별로 쓸모 있어 보이는 물건은 많지 않습니다. \"마음껏 둘러보십시오. 물건은 매번 바뀌니 언제든 또 찾아주시고요.\"", storyImage: nil, choice: [
+        Choice(choiceText: "살충제", ability: [.insecticide], abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 1, moneyGive: false, needAbility: nil, nextPageIndex: 2),
+        Choice(choiceText: "붕대와 부목", ability: [.bandage, .splint], abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 1, moneyGive: false, needAbility: nil, nextPageIndex: 3),
+        Choice(choiceText: "<스피치로 승부하라>", ability: [.book_speech], abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 1, moneyGive: false, needAbility: nil, nextPageIndex: 4),
+        Choice(choiceText: "떠난다", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 5)
+    ], endEpisodeNumber: 0),
+    
+    Page(index: 1, storyText: "살충제를 구매했습니다.", storyImage: nil, choice: [
+        Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
+    ], endEpisodeNumber: 0),
+    
+    Page(index: 1, storyText: "붕대와 부목을 구매했습니다.", storyImage: nil, choice: [
+        Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
+    ], endEpisodeNumber: 0),
+    
+    Page(index: 1, storyText: "<스피치로 승부하라>를 구매했습니다", storyImage: nil, choice: [
         Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
     ], endEpisodeNumber: 666),
-    Page(index: 1, storyText: "당신은 발걸음을 돌립니다.", storyImage: nil, endEpisodeNumber: 666)
+    
+    Page(index: 1, storyText: "여기엔 별로 살 만한 물건이 없는 듯 합니다. 당신은 물건을 구매하지 않고 트럭을 돌아섭니다.", storyImage: nil, choice: [
+        Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
+    ], endEpisodeNumber: 666),
+//선택지 그냥 간다
+    Page(index: 1, storyText: "당신은 발걸음을 돌립니다.", storyImage: nil, choice: [
+        Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
+    ], endEpisodeNumber: 666)
+    
 ]
+
+)
