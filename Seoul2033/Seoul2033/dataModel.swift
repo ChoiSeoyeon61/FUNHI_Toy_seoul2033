@@ -68,25 +68,25 @@ struct Choice {
     var needAbility: Ability?
     var nextPageIndex: Int
     }
-func getRandomNumber(){
-//튜토리얼에서 무작위 수 받기
-    if currentPage == 3 || 5 {
-        let num = Int.random(in: 0...3)
-        nextPageIndex = num
-    } else if endEpisodeNumber == 666{    //에피소드의 끝이 확인되었을 때, 다음 에피소드를 무작위로 선정하기
-        let num = Int.random(in: 0...4)
-        nextPageIndex = num
-        endEpisodeNumber = 0
-    }
-}
-//다음 페이지로 넘길 때마다 실행되는 함수
-func pageUpdate(){
-    //현재 페이지가 에피소드의 마지막인지를 확인하기
-    let arrayLast = episode.last!
-    if arrayLast == currentEpisode{
-        endEpisodeNumber = 666          //맞다면 666을 주기
-    }
-}
+//func getRandomNumber(){
+////튜토리얼에서 무작위 수 받기
+//    if santa.gameCharacter.currentPage == 3  {
+//        let num = Int.random(in: 3...5)
+//        nextPageIndex = num
+//    } else if endEpisodeNumber == 666{    //에피소드의 끝이 확인되었을 때, 다음 에피소드를 무작위로 선정하기
+//        let num = Int.random(in: 0...4)
+//        nextPageIndex = num
+//        endEpisodeNumber = 0
+//    }
+//}
+////다음 페이지로 넘길 때마다 실행되는 함수
+//func pageUpdate(){
+//    //현재 페이지가 에피소드의 마지막인지를 확인하기
+//    let arrayLast = episode.last!
+//    if arrayLast == currentEpisode{
+//        endEpisodeNumber = 666          //맞다면 666을 주기
+//    }
+//}
 
 // 게임 플레이시 나오는 텍스트 페이지 각각에 대한 스트럭처. 텍스트, 이미지(있을 수도 없을 수도 이씀.), 선택지(최대 3개) 로 구성
 struct Page {
@@ -103,10 +103,15 @@ struct Page {
 }
 //--------------------------------여기부터 인스턴스---------------------------------------
 // 아래 유저의 플레이어 인스턴스
-var santaCharactor1: GameCharacter = GameCharacter(health: 3, mental: 3, money: 3, ability: [], currentPage: 0)
+var santaCharacter1: GameCharacter = GameCharacter(health: 3, mental: 3, money: 3, ability: [], currentPage: 1)
 
 // 유저 인스턴스
-var santa:User = User(gameCharacter:santaCharactor1, totalDying: 0, cookie: 0, maxPage: 0, maxAbility: 0, setting: Setting())
+var santa:User = User(gameCharacter:santaCharacter1, totalDying: 0, cookie: 0, maxPage: 0, maxAbility: 0, setting: Setting())
+
+
+
+var RealFullStory:[[Page]] = [prologueEP,woodEP,truckSaleEP]
+
 
 
 // 게임 처음 시작 페이지 4p 구현해봄
@@ -133,7 +138,7 @@ let prologueEP : [Page] = [
                     Page(index: 11, storyText: "당신이 직접 마을을 떠나서 범인을 잡겠다고 했을 때, 마을 사람들은 저마다 복잡한 생각으로 가득찬 것 같아 보였습니다. 다들 밖은 위험한 것을 알지만, 선뜻 당신을 붙잡으려 하려는 이는 없습니다. 살인자는 아직도 당신을 노리고 있는 것은 아닐까요? 당신이 떠나면, 마을은 다시 불안에 떨지 않아도 되는 것 아닐까요? 짐을 들고 홀연히 서있는 당신에게 폐품업자 김 씨가 다가와 당신의 어깨를 붙잡고 말합니다. \"서울은 네가 생각했던 것보다 훨씬 더 끔찍하고 불친절할거다. 영문도 모른 채 다치고, 빼앗기고, 죽을 수도 있어. 너에게 불가능한 것을 요구할 수도 있고, 너가 약하다고 해서 봐주지도 않을거다. 그러니 살아남으려면 어떻게 쓸만한 것을 모으고, 능력을 길러라. 그리고 무엇보다, 다시 시작하는 걸 두려워하지 말거라\"", choice: [Choice(choiceText: "명심하겠습니다.", ability: nil, abilityGive: false, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 12)]),
                     Page(index: 12, storyText: "마을 사람들에게 작별 인사를 마친 뒤, 당신은 생애 처음으로 철근과 콘크리트가 우거진 서울의 폐허를 향해 발걸음을 내딛었습니다. 복잡하고 무거운 마음도 크지만 호기심과 궁금증으로 가슴이 뛰는 것도 느껴집니다. /n지금부터 당신의 모험이 시작됩니다.",storyImage: "tutorialSeoulImage", choice: [Choice(choiceText: "좋아, 가보자!", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, nextPageIndex: 0)])
     ]
-var woodEP: Episode = Episode(episode: [
+var woodEP: [Page] = [
     
         Page(index: 1, storyText: "무너진 목자재 아래에 긴급 구호 물품 상자가 깔려 있는 것이 보입니다! 저것들만 치우면 꺼낼 수 있겠는데요, 생각보다 무거워 보여서 자칫 잘못했다간 허리만 나갈 것 같습니다. ", storyImage: nil, choice: [
                   Choice(choiceText: "목자재를 치운다", ability: nil, abilityGive: true, health: 1, healthGive: false, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 1),
@@ -147,9 +152,9 @@ var woodEP: Episode = Episode(episode: [
         Page(index: 1, storyText: "당신은 발걸음을 돌립니다.", storyImage: nil, choice: [
             Choice(choiceText: "다음", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 666)
         ], endEpisodeNumber: 666)
-])
+]
 
-var truckSaleEP: Episode = Episode(episode: [
+var truckSaleEP: [Page] = [
     
     Page(index: 1, storyText: "당신은 길을 걷다가 파란 용달 트럭이 천천히 다가오는 것을 발견합니다. 트럭 짐칸엔 잡동사니가 가득 실려 있고, 활과 창으로 무장한 경호원 셋이 함께 타고 있습니다, 당신 앞에서 조수석 유리창이 내려가더니, 인상 좋은 남자 둘이 자신들을 서울역에서 온 상인이라고 소개하며 당신에게 가까이 와서 물건을 둘러보라고 합니다.", storyImage: nil, choice: [
             Choice(choiceText: "둘러본다", ability: nil, abilityGive: true, health: 0, healthGive: true, mental: 0, mentalGive: true, money: 0, moneyGive: true, needAbility: nil, nextPageIndex: 1),
@@ -186,7 +191,4 @@ var truckSaleEP: Episode = Episode(episode: [
     ], endEpisodeNumber: 666)
     
 ]
-
-)
-
 
