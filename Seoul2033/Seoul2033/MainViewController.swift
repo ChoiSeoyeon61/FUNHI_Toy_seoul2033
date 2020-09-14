@@ -22,42 +22,42 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var choiceTableView: UITableView!
     
     
-   
-       
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+   override func viewDidLoad() {
+         super.viewDidLoad()
+       self.choiceTableView.dataSource = self
+       self.choiceTableView.delegate = self
+         
+     }
+    
+    //현재 페이지 번호
+    let pageIndex: Int = 0
+     
+    // 섹션 수 : 1
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
-       }
-        //섹션 속 셀 개수
-     func numberOfSections(in tableView: UITableView) -> Int {
-           
-               
-        let currentpage = prologueEP[0]
+     }
+     //섹션 속 셀 개수 : Choice 어레이 안 Choice 개수
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        let currentpage = prologueEP[santaCharacter1.currentPage-1]
         let currentChoice = currentpage.choice.count
+        
         return currentChoice
     }
        
-       //각 셀 별 내용
-       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       //각 셀 별 내용 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "choiceCell") as! ChoiceTableViewCell
-           // 왜 never used이지..?
-           let list: Choice
-           list = prologueEP[0].choice[indexPath.row]
-           cell.choiceLable.text = list.choiceText
+        let list: Choice
+        list = prologueEP[0].choice[indexPath.row]
+        cell.choiceLable.text = list.choiceText
            
         return cell
-       }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-               return CGFloat(50)
-             }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      
-        
     }
+    
+ 
+  
 
     
     @IBAction func goTo0(_ sender: Any) {
