@@ -232,7 +232,7 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAr-Ee-xCP">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAr-Ee-xCP">
                                 <rect key="frame" x="30" y="148" width="347" height="437"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Apc-mY-hgt"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="BMg-2h-uYd"/>
@@ -311,12 +311,22 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9I-3O-eal">
+                                <rect key="frame" x="30" y="151" width="354" height="411"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="411" id="fhi-OD-jZo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="gAr-Ee-xCP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="2k6-8X-ARq"/>
                             <constraint firstItem="mn2-L9-aNW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4pd-WB-4cp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gAr-Ee-xCP" secondAttribute="trailing" constant="30" id="ORg-Nc-YeN"/>
+                            <constraint firstItem="h9I-3O-eal" firstAttribute="top" secondItem="TyB-cA-Nls" secondAttribute="bottom" constant="25.5" id="RgH-Z6-6YB"/>
                             <constraint firstItem="TyB-cA-Nls" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-332.75" id="Rw2-la-ijK"/>
                             <constraint firstItem="pM3-Qx-15M" firstAttribute="top" secondItem="HVi-V1-Nug" secondAttribute="bottom" constant="24.5" id="ckx-iq-tqY"/>
                             <constraint firstItem="gAr-Ee-xCP" firstAttribute="top" secondItem="TyB-cA-Nls" secondAttribute="bottom" constant="29.5" id="dFc-x4-FWf"/>
@@ -324,12 +334,19 @@
                             <constraint firstItem="HVi-V1-Nug" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hwG-rE-TGH"/>
                             <constraint firstAttribute="bottom" secondItem="mn2-L9-aNW" secondAttribute="bottom" id="nM9-Uz-gtH"/>
                             <constraint firstItem="biP-ym-cSt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qDb-kx-070"/>
+                            <constraint firstItem="h9I-3O-eal" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="qQg-FE-vdv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h9I-3O-eal" secondAttribute="trailing" constant="30" id="rgW-qE-xhS"/>
                             <constraint firstItem="biP-ym-cSt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-372.5" id="uWE-e9-CZW"/>
                             <constraint firstItem="mn2-L9-aNW" firstAttribute="top" secondItem="pM3-Qx-15M" secondAttribute="bottom" constant="12" id="w6e-aV-r2u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mn2-L9-aNW" secondAttribute="trailing" constant="16" id="yIe-EA-aFx"/>
                             <constraint firstItem="TyB-cA-Nls" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-4" id="zic-kn-CDu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gAr-Ee-xCP"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="VYT-Ug-XV8"/>
                     <connections>
@@ -339,6 +356,7 @@
                         <outlet property="mentalImage" destination="OVD-aL-l6Q" id="WnV-hF-iFd"/>
                         <outlet property="moneyImage" destination="uG8-0t-luI" id="YAx-rc-fPM"/>
                         <outlet property="pageNumber" destination="pM3-Qx-15M" id="L8A-Q4-QOd"/>
+                        <outlet property="testLable" destination="h9I-3O-eal" id="04z-P7-Uod"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

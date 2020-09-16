@@ -28,12 +28,11 @@ class ChoiceTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func ChoiceAction(_ sender: Any) {
+        
+    }
     // 섹션개수
     
-//     // 셀 선택되었을 때 행동
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
-//     
+  
 
 }
