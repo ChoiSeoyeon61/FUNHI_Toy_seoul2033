@@ -20,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45154B652511AECC00C6F9EC /* KoPubWorld Batang_Pro Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoPubWorld Batang_Pro Light.otf"; sourceTree = "<group>"; };
+		45154B662511AFC300C6F9EC /* KoPubWorld Dotum_Pro Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoPubWorld Dotum_Pro Light.otf"; sourceTree = "<group>"; };
+		45154B672511B03C00C6F9EC /* KoPubWorld Dotum_Pro Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoPubWorld Dotum_Pro Bold.otf"; sourceTree = "<group>"; };
 		BA4E3C3825008F790080B174 /* dataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataModel.swift; sourceTree = "<group>"; };
 		BA7A7EA424FCE0A500B42CA5 /* Seoul2033.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seoul2033.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7A7EA724FCE0A500B42CA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +70,9 @@
 				BA7A7EA724FCE0A500B42CA5 /* AppDelegate.swift */,
 				BA7A7EA924FCE0A500B42CA5 /* SceneDelegate.swift */,
 				BA7A7EAB24FCE0A500B42CA5 /* ViewController.swift */,
+				45154B652511AECC00C6F9EC /* KoPubWorld Batang_Pro Light.otf */,
+				45154B672511B03C00C6F9EC /* KoPubWorld Dotum_Pro Bold.otf */,
+				45154B662511AFC300C6F9EC /* KoPubWorld Dotum_Pro Light.otf */,
 				BA7A7EAD24FCE0A500B42CA5 /* Main.storyboard */,
 				BA7A7EB024FCE0A600B42CA5 /* Assets.xcassets */,
 				BA7A7EB224FCE0A600B42CA5 /* LaunchScreen.storyboard */,
