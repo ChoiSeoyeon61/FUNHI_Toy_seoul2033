@@ -68,7 +68,20 @@ struct Choice {
     var needAbility: Ability?
     var nextPageIndex: Int
     }
-func getRandomNumber(){
+
+// 게임 플레이시 나오는 텍스트 페이지 각각에 대한 스트럭처. 텍스트, 이미지(있을 수도 없을 수도 이씀.), 선택지(최대 3개) 로 구성
+struct Page {
+    var index: Int
+    var storyText: String
+    var storyImage: String?
+    var choice : Array = [Choice]()
+    // 선택지가 최소 1개, 최대 3개라 일단 이렇게 함.
+  
+    
+    //특정 숫자
+    var endEpisodeNumber = 0
+}
+/*func getRandomNumber(){
 //튜토리얼에서 무작위 수 받기
     if currentPage == 3 || 5 {
         let num = Int.random(in: 0...3)
@@ -86,20 +99,6 @@ func pageUpdate(){
     if arrayLast == currentEpisode{
         endEpisodeNumber = 666          //맞다면 666을 주기
     }
-}
-
-// 게임 플레이시 나오는 텍스트 페이지 각각에 대한 스트럭처. 텍스트, 이미지(있을 수도 없을 수도 이씀.), 선택지(최대 3개) 로 구성
-struct Page {
-    var index: Int
-    var storyText: String
-    var storyImage: String?
-    var choice : Array = [Choice]()
-    // 선택지가 최소 1개, 최대 3개라 일단 이렇게 함.
-  
-    
-    //특정 숫자
-    var endEpisodeNumber = 0
-
 }
 //--------------------------------여기부터 인스턴스---------------------------------------
 // 아래 유저의 플레이어 인스턴스
@@ -189,4 +188,4 @@ var truckSaleEP: Episode = Episode(episode: [
 
 )
 
-
+*/
