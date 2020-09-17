@@ -234,6 +234,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JNV-cv-VyV" firstAttribute="centerX" secondItem="e2S-X4-dKA" secondAttribute="centerX" id="EpC-ZY-Cog"/>
                             <constraint firstItem="sp6-is-Gvm" firstAttribute="top" secondItem="AwH-hu-P8T" secondAttribute="top" constant="14" id="Rdn-2R-VRS"/>
@@ -407,6 +408,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="UWW-PC-ZJN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Vz-iT-FcF"/>
                             <constraint firstItem="7lQ-YR-o2K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="3jx-ic-U0F"/>
