@@ -69,25 +69,26 @@ struct Choice {
     var needAbility: Ability?
     var nextPageIndex: Int
     }
+
 //func getRandomNumber(){
-////튜토리얼에서 무작위 수 받기
-//    if santa.gameCharacter.currentPage == 3  {
+//    //튜토리얼에서 무작위 수 받기
+//    if santa.gameCharacter.currentPageNumber == 3  {
 //        let num = Int.random(in: 3...5)
-//        nextPageIndex = num
+//        currentPage.nextPageIndex = num
 //    } else if endEpisodeNumber == 666{    //에피소드의 끝이 확인되었을 때, 다음 에피소드를 무작위로 선정하기
 //        let num = Int.random(in: 0...4)
 //        nextPageIndex = num
 //        endEpisodeNumber = 0
 //    }
 //}
-////다음 페이지로 넘길 때마다 실행되는 함수
-//func pageUpdate(){
-//    //현재 페이지가 에피소드의 마지막인지를 확인하기
+//다음 페이지로 넘길 때마다 실행되는 함수
+func pageUpdate(){
+    //현재 페이지가 에피소드의 마지막인지를 확인하기
 //    let arrayLast = episode.last!
 //    if arrayLast == currentEpisode{
 //        endEpisodeNumber = 666          //맞다면 666을 주기
-//    }
-//}
+    }
+
 
 // 게임 플레이시 나오는 텍스트 페이지 각각에 대한 스트럭처. 텍스트, 이미지(있을 수도 없을 수도 이씀.), 선택지(최대 3개) 로 구성
 struct Page {
@@ -104,7 +105,7 @@ struct Page {
 }
 //--------------------------------여기부터 인스턴스---------------------------------------
 // 아래 유저의 플레이어 인스턴스
-var santaCharacter1: GameCharacter = GameCharacter(health: 3, mental: 3, money: 3, ability: [], currentPageNumber: 1)
+var santaCharacter1: GameCharacter = GameCharacter(health: 3, mental: 3, money: 3, ability: [], currentPageNumber: 0)
 
 // 유저 인스턴스
 var santa:User = User(gameCharacter:santaCharacter1, totalDying: 0, cookie: 0, maxPage: 0, maxAbility: 0, setting: Setting())
