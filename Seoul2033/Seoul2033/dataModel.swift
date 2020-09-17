@@ -68,6 +68,7 @@ struct Choice {
     var needAbility: Ability?
     var nextPageIndex: Int
     }
+/*
 func getRandomNumber(){
 //튜토리얼에서 무작위 수 받기
     if currentPage == 3 || 5 {
@@ -87,7 +88,7 @@ func pageUpdate(){
         endEpisodeNumber = 666          //맞다면 666을 주기
     }
 }
-
+*/
 // 게임 플레이시 나오는 텍스트 페이지 각각에 대한 스트럭처. 텍스트, 이미지(있을 수도 없을 수도 이씀.), 선택지(최대 3개) 로 구성
 struct Page {
     var index: Int
