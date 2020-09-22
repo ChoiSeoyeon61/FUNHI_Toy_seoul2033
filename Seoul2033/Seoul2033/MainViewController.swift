@@ -52,15 +52,20 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var PagescrollView: UIScrollView!
     @IBOutlet weak var choiceTableView: UITableView!
     @IBOutlet weak var abilityLable: UILabel!
+    @IBOutlet weak var healthLabel: UILabel!
+    @IBOutlet weak var mentalLable: UILabel!
+    @IBOutlet weak var moneyLable: UILabel!
     
-    @IBOutlet weak var testh: UILabel!
-    // 뷰디드로드
-    @IBOutlet weak var textM: UILabel!
-    @IBOutlet weak var testMm: UILabel!
+   
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.choiceTableView.dataSource = self
         self.choiceTableView.delegate = self
+    
+        healthLabel.text = "체력"
+        mentalLable.text = "멘탈"
+            moneyLable.text = "돈"
     
         testLable.text = santa.gameCharacter.currentPage().storyText
         pageNumber.text = "\(santa.gameCharacter.pageIndex)"
@@ -69,12 +74,23 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         healthImage.image = UIImage(named: "health3")
         mentalImage.image = UIImage(named: "mental3")
         moneyImage.image = UIImage(named: "money3")
+        
+        
+        // 현재 보유 능력 레이블에 띄우기(뜨긴 뜨는데.. String으로 안 듬)
+        for ability in santa.gameCharacter.ability {
+        
+        abilityStringVer += [ability.abilityNamed()]
+        }
+        abilityLable.text = "\(abilityStringVer)"
+    
     }
    
    
    
     
+   
     
+      
     func changeCharacterAbility() {
        
        
@@ -108,6 +124,14 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
             }
                
         }
+        
+        // 현재 보유 능력 레이블에 띄우기(뜨긴 뜨는데.. String으로 안 듬)
+        for ability in santa.gameCharacter.ability {
+        
+        abilityStringVer += [ability.abilityNamed()]
+        }
+        abilityLable.text = "\(abilityStringVer)"
+        print(abilityStringVer)
         
         // 체력 / 멘탈 / 돈 이미지 업뎃
         healthImage.image = UIImage(named: "health\(santa.gameCharacter.health)")
