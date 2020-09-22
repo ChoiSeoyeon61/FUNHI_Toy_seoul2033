@@ -85,20 +85,13 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     }
    
-   
+    
    
     
    
     
       
-    func changeCharacterAbility() {
-       
-       
-    }
-
-    func changeHpMentalMoney() {
-        
-    }
+    
     
     func onOffChoiceCell() {
           

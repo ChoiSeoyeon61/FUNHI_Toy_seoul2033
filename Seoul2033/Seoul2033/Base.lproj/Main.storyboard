@@ -374,13 +374,13 @@
                         <outlet property="abilityLable" destination="oOQ-Lr-AW4" id="3Ea-t8-7KP"/>
                         <outlet property="choiceTableView" destination="HVi-V1-Nug" id="9GY-RL-hAg"/>
                         <outlet property="healthImage" destination="XeI-eJ-HEs" id="kfH-cd-7BV"/>
+                        <outlet property="healthLabel" destination="Fkr-WC-hnk" id="xxc-Ej-M8h"/>
                         <outlet property="mentalImage" destination="OVD-aL-l6Q" id="WnV-hF-iFd"/>
+                        <outlet property="mentalLable" destination="8HG-2M-9BN" id="HgP-gc-boa"/>
                         <outlet property="moneyImage" destination="uG8-0t-luI" id="YAx-rc-fPM"/>
+                        <outlet property="moneyLable" destination="NcZ-Up-5av" id="slb-UC-SUv"/>
                         <outlet property="pageNumber" destination="pM3-Qx-15M" id="L8A-Q4-QOd"/>
                         <outlet property="testLable" destination="h9I-3O-eal" id="04z-P7-Uod"/>
-                        <outlet property="testMm" destination="NcZ-Up-5av" id="l6z-xv-Wyd"/>
-                        <outlet property="testh" destination="Fkr-WC-hnk" id="XBM-P9-Vc1"/>
-                        <outlet property="textM" destination="8HG-2M-9BN" id="jjI-Jw-Ogh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
