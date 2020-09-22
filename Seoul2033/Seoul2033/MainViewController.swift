@@ -117,36 +117,60 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
             }
                
         }
-        
-        // 현재 보유 능력 레이블에 띄우기(뜨긴 뜨는데.. String으로 안 듬)
+// 페이지 2/6번에서
+        if santa.gameCharacter.currentEpPageIndex == 2 {
+            if santa.gameCharacter.currentPage().choice[indexPath.row].nextPageIndex == 3 {
+            santa.gameCharacter.ability += [.leadership]
+          } else if santa.gameCharacter.currentPage().choice[indexPath.row].nextPageIndex == 4 {
+            santa.gameCharacter.ability += [.pureFace]
+          } else if santa.gameCharacter.currentPage().choice[indexPath.row].nextPageIndex == 5 {
+            santa.gameCharacter.ability += [.gameSkill]
+          }
+            
+          } else if santa.gameCharacter.currentEpPageIndex == 6 {
+        if santa.gameCharacter.currentPage().choice[indexPath.row].nextPageIndex == 7 {
+            santa.gameCharacter.ability += [.english]
+          } else if santa.gameCharacter.currentPage().choice[indexPath.row].nextPageIndex == 8 {
+            santa.gameCharacter.ability += [.machineEngineering]
+          } else if santa.gameCharacter.currentPage().choice[indexPath.row].nextPageIndex == 9 {
+            santa.gameCharacter.ability += [.nimble]
+          }
+        }
+
+        // 현재 보유 능력 AbilityLable에 띄우기(뜨긴 뜨는데.. String으로 안 듬)
+        abilityStringVer = []
         for ability in santa.gameCharacter.ability {
-        
+     
         abilityStringVer += [ability.abilityNamed()]
         }
+        // 현재 표시되는 방법 : ["능력", "능력"]. 수정 필요!!!
         abilityLable.text = "\(abilityStringVer)"
         print(abilityStringVer)
         
         // 체력 / 멘탈 / 돈 이미지 업뎃
         healthImage.image = UIImage(named: "health\(santa.gameCharacter.health)")
-        mentalImage.image = UIImage(named: "mental\( santa.gameCharacter.mental)")
+        mentalImage.image = UIImage(named: "mental\(santa.gameCharacter.mental)")
         moneyImage.image = UIImage(named: "money\(santa.gameCharacter.money)")
         santa.gameCharacter.pageIndex += 1
+        
        
+        
         //페이지 인덱스값 올려서 넘기기 & 다음 페이지 없으면(666이면) 에피소드 넘기고 페이지인덱스값 0 만들기
         santa.gameCharacter.currentEpPageIndex = santa.gameCharacter.currentPage().choice[indexPath.row].nextPageIndex
-        if  santa.gameCharacter.currentEpPageIndex == 666 {
+        if santa.gameCharacter.currentEpPageIndex == 666 {
             santa.gameCharacter.currentEpisodeIndex = getRandomEpNumber(epList: RealFullStory, currentEpIndex: santa.gameCharacter.currentEpisodeIndex)
             santa.gameCharacter.currentEpPageIndex = 0
             
         }
         
         
+        
         // 페이지 storytext를 위 값 이용해 업뎃
         testLable.text = "\(santa.gameCharacter.currentPage().storyText)"
         pageNumber.text = "\(santa.gameCharacter.pageIndex)"
-        abilityLable.text = "\(santa.gameCharacter.ability)"
+        abilityLable.text = "\(/*santa.gameCharacter.ability*/abilityStringVer)"
         
-       
+        
        
        
         

@@ -7,187 +7,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "743572AB-CE1D-4602-A80F-257763C27299"
+            uuid = "625ED68A-592A-430F-B6D7-49C317E374E4"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Seoul2033/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0DB19945-69F8-4C95-B2E8-B84287027D0B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seoul2033/MainViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "ViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "0DB19945-69F8-4C95-B2E8-B84287027D0B - 63c33d9656bcf073"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Seoul2033.ViewController.testLable.getter : Swift.Optional&lt;__C.UILabel&gt;"
-                  moduleName = "Seoul2033"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/choiseoyeon/Documents/GitHub/FUNHI_Toy_seoul2033/Seoul2033/Seoul2033/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "88">
-               </Location>
-               <Location
-                  uuid = "0DB19945-69F8-4C95-B2E8-B84287027D0B - 85844d697c049a67"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Seoul2033.ViewController.testLable.setter : Swift.Optional&lt;__C.UILabel&gt;"
-                  moduleName = "Seoul2033"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/choiseoyeon/Documents/GitHub/FUNHI_Toy_seoul2033/Seoul2033/Seoul2033/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "155">
-               </Location>
-               <Location
-                  uuid = "0DB19945-69F8-4C95-B2E8-B84287027D0B - 5dc48bf823a616d1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Seoul2033.ViewController.testLable.modify : Swift.Optional&lt;__C.UILabel&gt;"
-                  moduleName = "Seoul2033"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/choiseoyeon/Documents/GitHub/FUNHI_Toy_seoul2033/Seoul2033/Seoul2033/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "59">
-               </Location>
-               <Location
-                  uuid = "0DB19945-69F8-4C95-B2E8-B84287027D0B - 1e7499cd929afcf9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Seoul2033.ViewController.testLable.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Seoul2033"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/choiseoyeon/Documents/GitHub/FUNHI_Toy_seoul2033/Seoul2033/Seoul2033/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  uuid = "0DB19945-69F8-4C95-B2E8-B84287027D0B - f2cb961c8a316746"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Seoul2033.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Seoul2033.ViewController"
-                  moduleName = "Seoul2033"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/choiseoyeon/Documents/GitHub/FUNHI_Toy_seoul2033/Seoul2033/Seoul2033/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "326">
-               </Location>
-               <Location
-                  uuid = "0DB19945-69F8-4C95-B2E8-B84287027D0B - a6d7ac0e56f59c8a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Seoul2033.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Seoul2033.ViewController&gt;"
-                  moduleName = "Seoul2033"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/choiseoyeon/Documents/GitHub/FUNHI_Toy_seoul2033/Seoul2033/Seoul2033/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "267">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DB3EEADE-D8C8-4ED2-B259-23276DD5C81F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seoul2033/MainViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "646C3CCA-61DB-423F-A6C7-481F3A85D96A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seoul2033/MainViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "13AF1E86-FEEA-47C4-88D6-8CB82A99DD21"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seoul2033/MainViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AFDC7F20-905A-4BDB-A8BD-6B9CE83DD1F6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seoul2033/MainViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -195,7 +23,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8060E16A-1CAE-43B0-82A6-20789EEAB62D"
+            uuid = "D7707D86-4292-499E-AB2F-C571D19F600B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -204,6 +32,22 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
             endingLineNumber = "119"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "233F317C-756C-44B0-8EEB-F7DCD438CA1F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Seoul2033/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
