@@ -25,12 +25,19 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
            
         //각 셀 별 내용 : 텍스트 띄우기
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
+     
+            let list: Choice = santa.gameCharacter.currentPage().choice[indexPath.row]
+//            if list.needAbility != nil {
+//                ChoiceTableViewCell.SelectionStyle = .none
+//                tableView.allowsSelection = false
+//            }
             let cell = tableView.dequeueReusableCell(withIdentifier: "choiceCell") as! ChoiceTableViewCell
-            let list: Choice
-            list = santa.gameCharacter.currentPage().choice[indexPath.row]
+           
+           
             cell.choiceLable.text = list.choiceText
-        
+            
+       
+            
             
             return cell
         }
@@ -62,15 +69,18 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         super.viewDidLoad()
         self.choiceTableView.dataSource = self
         self.choiceTableView.delegate = self
-    
+        
+        // 체력 / 멘탈 / 돈 글자 지정
         healthLabel.text = "체력"
         mentalLable.text = "멘탈"
-            moneyLable.text = "돈"
-    
+        moneyLable.text = "돈"
+        
+        // 게임 본문 & 쪽넘버 & 능력창 String 업뎃
         testLable.text = santa.gameCharacter.currentPage().storyText
         pageNumber.text = "\(santa.gameCharacter.pageIndex)"
         abilityLable.text = "\(santa.gameCharacter.ability)"
-    
+        
+        // 체력 / 멘탈 / 돈 이미지 업뎃
         healthImage.image = UIImage(named: "health3")
         mentalImage.image = UIImage(named: "mental3")
         moneyImage.image = UIImage(named: "money3")
@@ -86,7 +96,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
    
     
-   
+    func checkHaveNeedAbility() {
+       
+    }
     
    
     
@@ -96,13 +108,24 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     func onOffChoiceCell() {
           
     }
+    
+    
     // 페이지 업데이트
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
+        let santaNeed = santa.gameCharacter.currentPage().choice[indexPath.row].needAbility
+        if santaNeed == [] || Seoul2033.checkHaveNeedAbility(needAbilitys: santaNeed, myAbilitys: santa.gameCharacter.ability) == true {
+            
+      
         // 체력 / 멘탈 / 돈 데이터 업뎃
         santa.gameCharacter.health += santa.gameCharacter.currentPage().choice[indexPath.row].health
         santa.gameCharacter.mental += santa.gameCharacter.currentPage().choice[indexPath.row].mental
         santa.gameCharacter.money += santa.gameCharacter.currentPage().choice[indexPath.row].money
+        
+        // 체력 / 멘탈 / 돈 이미지 업뎃
+        healthImage.image = UIImage(named: "health\(santa.gameCharacter.health)")
+        mentalImage.image = UIImage(named: "mental\(santa.gameCharacter.mental)")
+        moneyImage.image = UIImage(named: "money\(santa.gameCharacter.money)")
         
         // 능력 주기 or 뺏기
         if santa.gameCharacter.currentPage().choice[indexPath.row].ability != [] {
@@ -117,8 +140,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
             }
                
         }
-// 페이지 2/6번에서
-        if santa.gameCharacter.currentEpPageIndex == 2 {
+// 프롤로그EP 내에서 랜덤한 능력 주는 페이지로 이동할 때 해당 능력 캐릭터에게 추가해주기
+        //첫 번째 능력 추가해주기
+        if santa.gameCharacter.currentEpisodeIndex == 0 && santa.gameCharacter.currentEpPageIndex == 2 {
             if santa.gameCharacter.currentPage().choice[indexPath.row].nextPageIndex == 3 {
             santa.gameCharacter.ability += [.leadership]
           } else if santa.gameCharacter.currentPage().choice[indexPath.row].nextPageIndex == 4 {
@@ -127,7 +151,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
             santa.gameCharacter.ability += [.gameSkill]
           }
             
-          } else if santa.gameCharacter.currentEpPageIndex == 6 {
+          //두 번째 능력 추가해주기
+          } else if santa.gameCharacter.currentEpisodeIndex == 0 && santa.gameCharacter.currentEpPageIndex == 6 {
         if santa.gameCharacter.currentPage().choice[indexPath.row].nextPageIndex == 7 {
             santa.gameCharacter.ability += [.english]
           } else if santa.gameCharacter.currentPage().choice[indexPath.row].nextPageIndex == 8 {
@@ -140,17 +165,13 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         // 현재 보유 능력 AbilityLable에 띄우기(뜨긴 뜨는데.. String으로 안 듬)
         abilityStringVer = []
         for ability in santa.gameCharacter.ability {
-     
         abilityStringVer += [ability.abilityNamed()]
         }
         // 현재 표시되는 방법 : ["능력", "능력"]. 수정 필요!!!
         abilityLable.text = "\(abilityStringVer)"
         print(abilityStringVer)
         
-        // 체력 / 멘탈 / 돈 이미지 업뎃
-        healthImage.image = UIImage(named: "health\(santa.gameCharacter.health)")
-        mentalImage.image = UIImage(named: "mental\(santa.gameCharacter.mental)")
-        moneyImage.image = UIImage(named: "money\(santa.gameCharacter.money)")
+       
         santa.gameCharacter.pageIndex += 1
         
        
@@ -163,46 +184,22 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
             
         }
         
-        
-        
-        // 페이지 storytext를 위 값 이용해 업뎃
+        // 페이지 storytext & 쪽넘버 & 능력창 String 업뎃
         testLable.text = "\(santa.gameCharacter.currentPage().storyText)"
         pageNumber.text = "\(santa.gameCharacter.pageIndex)"
-        abilityLable.text = "\(/*santa.gameCharacter.ability*/abilityStringVer)"
+        abilityLable.text = "\(abilityStringVer)"
         
         
-       
-       
+        
+        //활성화하려면 능력이 필요한 선택지 활성화/비활성화 여부 결정하기
+        
         
         //tableView 업뎃
         self.choiceTableView.reloadData()
-     
-      
-       
-        
-        
+        }  else {
+            
         }
-    
-    // 캐릭터
-//        if prologueEP[santaCharacter1.currentPageNumber].choice.count != 0 {
-//            if prologueEP[santaCharacter1.currentPageNumber].choice[indexPath.row].abilityGive == true {
-//                santaCharacter1.ability += prologueEP[santaCharacter1.currentPageNumber].choice[indexPath.row].ability
-//            } else {
-//                // abilityGive가 false일 때 캐릭터 ability랑 choice ability랑 비교해서 공통인 부분을 캐릭터 ability에서 삭제해야 함.
-//                for i in santaCharacter1.ability{
-//
-//                }
-//            }
-//
-//
-//        }
-        
-  
-
-    
-    
-    
-    
+        }
     
     
     @IBAction func goTo0(_ sender: Any) {
