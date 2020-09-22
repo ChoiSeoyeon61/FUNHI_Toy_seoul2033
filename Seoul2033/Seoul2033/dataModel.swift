@@ -9,30 +9,36 @@ import Foundation
 import UIKit
 
 //---------------------------------여기는 이넘이랑 스트럭처------------------------------------
-//임시로 만듦, 내용 보완 필요
 
-//플레이어 능력. 순진한 얼굴, 리트리버, 웅변, 교섭, 능숙한 거짓말, 요리 실력, 철학, 영어 등등등등등
+
+// 다음 페이지 인덱스 랜덤으로 리턴
 func getRandomPageNumber(randomStartNum : Int, randomFinishNum: Int ) -> Int {
     let newNextPageIndex: Int = Int.random(in: randomStartNum...randomFinishNum)
     return newNextPageIndex
     }
 
-func getRandomEpNumber(epList: [[Page]] ) -> Int {
-var 이야기목록 = epList
-var 남은에피수: Int = epList.count
-var EPindex: Int = 0
-var currentEP = 이야기목록[index]
-print(currentEP)
-for _ in 1...4 {
+var RealFullStory:[[Page]] = [prologueEP,woodEP,truckSaleEP]
 
-이야기목록.remove(at: index)
-남은에피수 -= 1
-
-index = Int.random(in: 0...남은에피수-1)
-currentEP = 이야기목록[index]
+// 다음 에피소드 인덱스 랜덤으로 리턴
+func getRandomEpNumber(epList: [[Page]], currentEpIndex: Int ) -> Int {
+    var epListVar = epList
+print(epListVar)
+print(currentEpIndex)
+    var epListItemCount: Int = epListVar.count
+    print(epListItemCount)
+var epIndex: Int = currentEpIndex
+var currentEP = epList[epIndex]
     print(currentEP)
-    }
-    return 0
+   
+
+RealFullStory.remove(at: epIndex)
+epListItemCount -= 1
+
+epIndex = Int.random(in: 0...epListItemCount-1)
+currentEP = RealFullStory[epIndex]
+    print(currentEP)
+
+    return epIndex
 }
 
 enum Ability {
@@ -109,15 +115,13 @@ struct GameCharacter {
     var ability:[Ability]
     // currentPage -> " Number로 변경 : 인덱스값이라 더 의미 전달 잘 됨.
     var GameFullStory:[[Page]] = RealFullStory
-    var currentEpPageIndex: Int = 0 {
-        didSet {
-           
-        }
+    var currentEpPageIndex: Int = 0
+    var currentEpisodeIndex : Int = 0
+    func currentEpisode() -> [Page] {
+        return RealFullStory[currentEpisodeIndex]
     }
-    var currentEpisode : [Page]
     func currentPage() -> Page {
-      
-       return currentEpisode[currentEpPageIndex]
+        return currentEpisode()[currentEpPageIndex]
     }
     var pageIndex = 1
     
@@ -181,7 +185,7 @@ func pageUpdate(){
 
 
 
-   var santaCharacter1: GameCharacter = GameCharacter(health: 3, mental: 3, money: 3, ability: [], currentEpPageIndex: 0, currentEpisode: prologueEP)
+var santaCharacter1: GameCharacter = GameCharacter(health: 3, mental: 3, money: 3, ability: [])
 
    // 유저 인스턴스
    var santa:User = User(gameCharacter: santaCharacter1, totalDying: 0, cookie: 0, maxPage: 0, maxAbility: 0, setting: Setting())
@@ -267,6 +271,6 @@ var truckSaleEP: [Page] = [
 ]
 
         
-var RealFullStory:[[Page]] = [prologueEP,woodEP,truckSaleEP]
+
 
 
