@@ -355,6 +355,9 @@
                                             <attributedString key="attributedTitle"/>
                                             <imageReference key="image" image="모험재시작버튼" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="restartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F4x-e9-sYd"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="능력이 들어갈 자리입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHC-dl-dVt">
                                         <rect key="frame" x="36" y="58" width="342" height="275"/>

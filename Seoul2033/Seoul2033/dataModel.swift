@@ -91,10 +91,10 @@ struct Page {
 
 //게임 캐릭터. 플레이 시작 시 생성, 죽으면 삭제
 struct GameCharacter {
-    var health: Int 
-    var mental: Int
-    var money: Int
-    var ability:[Ability]
+    var health: Int = 3
+    var mental: Int = 3
+    var money: Int = 2
+    var ability:[Ability] = []
     // currentPage -> " Number로 변경 : 인덱스값이라 더 의미 전달 잘 됨.
     var GameFullStory:[[Page]] = RealFullStory
     var currentEpPageIndex: Int = 0

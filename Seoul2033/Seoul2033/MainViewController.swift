@@ -65,6 +65,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     @IBOutlet var tabCloseButton: UIButton!
     @IBOutlet var abilityPanel: UIView!
     @IBOutlet var abilityLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,7 +115,24 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
        
     }
     
-   
+   //게임 재시작하기
+    @IBAction func restartGame(_ sender: Any) {
+        santa.gameCharacter.health = 3
+        santa.gameCharacter.mental = 3
+        santa.gameCharacter.money = 2
+        santa.gameCharacter.pageIndex = 1
+        santa.gameCharacter.ability.removeAll()
+        RealFullStory = [prologueEP,woodEP,truckSaleEP]
+        santa.gameCharacter.currentEpisodeIndex = 0
+        santa.gameCharacter.currentEpPageIndex = 0
+        abilityPanel.isHidden = true
+        self.choiceTableView.reloadData()
+        testLable.text = santa.gameCharacter.currentPage().storyText
+        tabOpenButton.isHidden = false
+        abilityStringVer.removeAll()
+        abilityLabel.text = "\(abilityStringVer)"
+        tabOpenButton.setTitle("\(abilityStringVer)", for: .normal)
+}
     
       
     
@@ -214,7 +232,6 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         self.choiceTableView.reloadData()
         print(santa.gameCharacter.ability)
       
-
         
         
         //tableView 업뎃
