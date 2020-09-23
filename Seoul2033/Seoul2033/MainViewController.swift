@@ -110,10 +110,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         tabOpenButton.isHidden = false
     }
     
-    
-    func checkHaveNeedAbility() {
-       
-    }
+  
     
    //게임 재시작하기
     @IBAction func restartGame(_ sender: Any) {
@@ -133,14 +130,6 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         abilityLabel.text = "\(abilityStringVer)"
         tabOpenButton.setTitle("\(abilityStringVer)", for: .normal)
 }
-    
-      
-    
-    
-    func onOffChoiceCell() {
-          
-    }
-    
     
     // 페이지 업데이트
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -211,6 +200,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         
         //페이지 인덱스값 올려서 넘기기 & 다음 페이지 없으면(666이면) 에피소드 넘기고 페이지인덱스값 0 만들기
         santa.gameCharacter.currentEpPageIndex = santa.gameCharacter.currentPage().choice[indexPath.row].nextPageIndex
+        //에피소드 넘기기
         if santa.gameCharacter.currentEpPageIndex == 666 {
             santa.gameCharacter.currentEpisodeIndex = getRandomEpNumber(epList: RealFullStory, currentEpIndex: santa.gameCharacter.currentEpisodeIndex)
             santa.gameCharacter.currentEpPageIndex = 0

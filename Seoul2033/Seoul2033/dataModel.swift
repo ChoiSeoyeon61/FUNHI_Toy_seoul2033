@@ -127,29 +127,25 @@ struct Setting{
     var rowSpacig : Int = 28
 }
 
+// 에피 랜덤으로 넘기는 함수
 func getRandomEpNumber(epList: [[Page]], currentEpIndex: Int ) -> Int {
     let epListVar = epList
-    //print(epListVar)
-    //print(currentEpIndex)
     var epListItemCount: Int = epListVar.count
-    //print(epListItemCount)
     var epIndex: Int = currentEpIndex
     var currentEP = epList[epIndex]
-    //print(currentEP)
     RealFullStory.remove(at: epIndex)
     epListItemCount -= 1
     epIndex = Int.random(in: 0...epListItemCount-1)
     currentEP = RealFullStory[epIndex]
-    //print(currentEP)
     return epIndex
 }
-
+// nextPageIndex 랜덤값 리턴하는 함수
 func getRandomPageNumber(randomStartNum : Int, randomFinishNum: Int ) -> Int {
     let newNextPageIndex: Int = Int.random(in: randomStartNum...randomFinishNum)
   
     return newNextPageIndex
     }
-
+// 셀 활성화 조건 능력 가지고 있나 체크하는 함수
 func checkHaveNeedAbility(needAbilitys: [Ability], myAbilitys: [Ability]) -> Bool {
     var needAbilitysCopy = needAbilitys
     let haveAbility: Bool
@@ -212,7 +208,7 @@ let prologueEP : [Page] = [
 var woodEP: [Page] = [
 
         Page(index: 1, storyText: "무너진 목자재 아래에 긴급 구호 물품 상자가 깔려 있는 것이 보입니다! 저것들만 치우면 꺼낼 수 있겠는데요, 생각보다 무거워 보여서 자칫 잘못했다간 허리만 나갈 것 같습니다. ", storyImage: nil, choice: [
-            Choice(choiceText: "목자재를 치운다", ability: [], abilityGive: true, health: -1,  mental: 0,money: 0,  needAbility: [.machineEngineering], nextPageIndex: 1),
+            Choice(choiceText: "목자재를 치운다", ability: [], abilityGive: true, health: -1,  mental: 0,money: 0,  needAbility: [.muscularStrength], nextPageIndex: 1),
                   Choice(choiceText: "그냥 간다", ability: [], abilityGive: true, health: 0, mental: 0, money: 0,  needAbility: [],nextPageIndex: 2)
             ], endEpisodeNumber: 1),
 
