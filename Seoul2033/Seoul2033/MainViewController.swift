@@ -109,20 +109,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         tabOpenButton.isHidden = false
     }
     
-    
-    func checkHaveNeedAbility() {
-       
-    }
+  
     
    
-    
-      
-    
-    
-    func onOffChoiceCell() {
-          
-    }
-    
     
     // 페이지 업데이트
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
