@@ -127,29 +127,25 @@ struct Setting{
     var rowSpacig : Int = 28
 }
 
+// 에피 랜덤으로 넘기는 함수
 func getRandomEpNumber(epList: [[Page]], currentEpIndex: Int ) -> Int {
     let epListVar = epList
-    //print(epListVar)
-    //print(currentEpIndex)
     var epListItemCount: Int = epListVar.count
-    //print(epListItemCount)
     var epIndex: Int = currentEpIndex
     var currentEP = epList[epIndex]
-    //print(currentEP)
     RealFullStory.remove(at: epIndex)
     epListItemCount -= 1
     epIndex = Int.random(in: 0...epListItemCount-1)
     currentEP = RealFullStory[epIndex]
-    //print(currentEP)
     return epIndex
 }
-
+// nextPageIndex 랜덤값 리턴하는 함수
 func getRandomPageNumber(randomStartNum : Int, randomFinishNum: Int ) -> Int {
     let newNextPageIndex: Int = Int.random(in: randomStartNum...randomFinishNum)
   
     return newNextPageIndex
     }
-
+// 셀 활성화 조건 능력 가지고 있나 체크하는 함수
 func checkHaveNeedAbility(needAbilitys: [Ability], myAbilitys: [Ability]) -> Bool {
     var needAbilitysCopy = needAbilitys
     let haveAbility: Bool
