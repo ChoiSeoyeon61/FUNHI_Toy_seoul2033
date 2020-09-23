@@ -58,13 +58,14 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     @IBOutlet weak var PagescrollView: UIScrollView!
     @IBOutlet weak var choiceTableView: UITableView!
-    @IBOutlet weak var abilityLable: UILabel!
     @IBOutlet weak var healthLabel: UILabel!
     @IBOutlet weak var mentalLable: UILabel!
     @IBOutlet weak var moneyLable: UILabel!
+    @IBOutlet var tabOpenButton: UIButton!
+    @IBOutlet var tabCloseButton: UIButton!
+    @IBOutlet var abilityPanel: UIView!
+    @IBOutlet var abilityLabel: UILabel!
     
-   
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.choiceTableView.dataSource = self
@@ -78,8 +79,11 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         // 게임 본문 & 쪽넘버 & 능력창 String 업뎃
         testLable.text = santa.gameCharacter.currentPage().storyText
         pageNumber.text = "\(santa.gameCharacter.pageIndex)"
-        abilityLable.text = "\(santa.gameCharacter.ability)"
-        
+
+        tabOpenButton.setTitle("\(santa.gameCharacter.ability)", for: .normal)
+        abilityLabel.text = "\(santa.gameCharacter.ability)"
+        abilityLabel.text = "\(santa.gameCharacter.ability)"
+    
         // 체력 / 멘탈 / 돈 이미지 업뎃
         healthImage.image = UIImage(named: "health3")
         mentalImage.image = UIImage(named: "mental3")
@@ -91,10 +95,20 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         
         abilityStringVer += [ability.abilityNamed()]
         }
-        abilityLable.text = "\(abilityStringVer)"
+        tabOpenButton.setTitle("\(abilityStringVer)", for: .normal)
+        abilityLabel.text = "\(abilityStringVer)"
     
     }
-   
+   //하단 바 클릭하면 패널 올라오기
+    @IBAction func tabOpen(_ sender: Any) {
+        abilityPanel.isHidden = false
+        tabOpenButton.isHidden = true
+    }
+    @IBAction func tabClose(_ sender: Any) {
+        abilityPanel.isHidden = true
+        tabOpenButton.isHidden = false
+    }
+    
     
     func checkHaveNeedAbility() {
        
@@ -168,7 +182,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         abilityStringVer += [ability.abilityNamed()]
         }
         // 현재 표시되는 방법 : ["능력", "능력"]. 수정 필요!!!
-        abilityLable.text = "\(abilityStringVer)"
+        tabOpenButton.setTitle("\(abilityStringVer)", for: .normal)
+        abilityLabel.text = "\(abilityStringVer)"
         print(abilityStringVer)
         
        
@@ -187,11 +202,19 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         // 페이지 storytext & 쪽넘버 & 능력창 String 업뎃
         testLable.text = "\(santa.gameCharacter.currentPage().storyText)"
         pageNumber.text = "\(santa.gameCharacter.pageIndex)"
-        abilityLable.text = "\(abilityStringVer)"
+        tabOpenButton.setTitle("\(/*santa.gameCharacter.ability*/abilityStringVer)", for: .normal)
+        abilityLabel.text = "\(/*santa.gameCharacter.ability*/abilityStringVer)"
+
         
         
-        
+
         //활성화하려면 능력이 필요한 선택지 활성화/비활성화 여부 결정하기
+
+        //tableView 업뎃
+        self.choiceTableView.reloadData()
+        print(santa.gameCharacter.ability)
+      
+
         
         
         //tableView 업뎃
