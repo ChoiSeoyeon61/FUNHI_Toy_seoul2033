@@ -15,41 +15,61 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         func numberOfSections(in tableView: UITableView) -> Int {
             return 1
          }
+    
          //섹션 속 셀 개수 : Choice 개수
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            
-            let currentChoice = santa.gameCharacter.currentPage().choice.count
-            print(currentChoice)
-            return currentChoice
+            var intToReturn : Int = 0
+            if tableView == mainStoryTableView{
+                let story = labelArrayInTable.count
+                intToReturn = story
+            } else if tableView == choiceTableView{
+                let currentChoice = santa.gameCharacter.currentPage().choice.count
+                print(currentChoice)
+                intToReturn = currentChoice
+            }
+            return intToReturn
         }
            
         //각 셀 별 내용 : 텍스트 띄우기
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     
-            let list: Choice = santa.gameCharacter.currentPage().choice[indexPath.row]
-//            if list.needAbility != nil {
-//                ChoiceTableViewCell.SelectionStyle = .none
-//                tableView.allowsSelection = false
-//            }
-            let cell = tableView.dequeueReusableCell(withIdentifier: "choiceCell") as! ChoiceTableViewCell
-           
-           
-            cell.choiceLable.text = list.choiceText
-            
-       
-            
-            
-            return cell
+            var cellToReturn = UITableViewCell()
+            if tableView == mainStoryTableView{
+                let storyCell = tableView.dequeueReusableCell(withIdentifier: "storyCell", for: indexPath) as! storyTableViewCell
+                let storyLine: String = labelArrayInTable[indexPath.row]
+                let storyImage: String = imageArrayInTable[indexPath.row]
+                
+                storyCell.update(image: storyImage, text: storyLine)
+                 cellToReturn = storyCell
+                
+            } else if tableView == choiceTableView{
+                let list: Choice = santa.gameCharacter.currentPage().choice[indexPath.row]
+    //            if list.needAbility != nil {
+    //                ChoiceTableViewCell.SelectionStyle = .none
+    //                tableView.allowsSelection = false
+    //            }
+                let cell = tableView.dequeueReusableCell(withIdentifier: "choiceCell") as! ChoiceTableViewCell
+                cell.choiceLable.text = list.choiceText
+                
+                cellToReturn = cell
+            }
+            return cellToReturn
         }
     
 //셀 높이
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return CGFloat(55)
+            var height = 0
+            if tableView == mainStoryTableView{
+                self.mainStoryTableView.rowHeight = UITableView.automaticDimension
+                height = Int(UITableView.automaticDimension)
+            } else if tableView == choiceTableView{
+                height = 55
+            }
+            return CGFloat(height)
         }
 
    
 // 아웃렛
-    @IBOutlet weak var testLable: UILabel!
+ 
     
     @IBOutlet weak var healthImage: UIImageView!
     @IBOutlet weak var mentalImage: UIImageView!
@@ -65,12 +85,15 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     @IBOutlet var tabCloseButton: UIButton!
     @IBOutlet var abilityPanel: UIView!
     @IBOutlet var abilityLabel: UILabel!
-
+    @IBOutlet var mainStoryTableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.choiceTableView.dataSource = self
         self.choiceTableView.delegate = self
+        self.mainStoryTableView.dataSource = self
+        self.mainStoryTableView.delegate = self
         
         // 체력 / 멘탈 / 돈 글자 지정
         healthLabel.text = "체력"
@@ -78,7 +101,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         moneyLable.text = "돈"
         
         // 게임 본문 & 쪽넘버 & 능력창 String 업뎃
-        testLable.text = santa.gameCharacter.currentPage().storyText
+        //testLable.text = santa.gameCharacter.currentPage().storyText
+        mainStoryTableView.reloadData()
         pageNumber.text = "\(santa.gameCharacter.pageIndex)"
 
         tabOpenButton.setTitle("\(santa.gameCharacter.ability)", for: .normal)
@@ -93,11 +117,19 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         
         // 현재 보유 능력 레이블에 띄우기(뜨긴 뜨는데.. String으로 안 듬)
         for ability in santa.gameCharacter.ability {
-        
+            
+        //메인 스토리 테이블뷰 속 어레이에 값 넣기
+        labelArrayInTable.append(santa.gameCharacter.currentPage().storyText)
+        imageArrayInTable.append(santa.gameCharacter.currentPage().storyImage ?? "noImage")
+           
+    
         abilityStringVer += [ability.abilityNamed()]
         }
         tabOpenButton.setTitle("\(abilityStringVer)", for: .normal)
         abilityLabel.text = "\(abilityStringVer)"
+        //santa.gameCharacter.currentEpPageIndex += 1
+        self.mainStoryTableView.rowHeight = UITableView.automaticDimension
+        self.mainStoryTableView.estimatedRowHeight = 200
     
     }
    //하단 바 클릭하면 패널 올라오기
@@ -109,11 +141,21 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         abilityPanel.isHidden = true
         tabOpenButton.isHidden = false
     }
+  //메인 스토리 테이블뷰 어레이
+    var labelArrayInTable : [String] = ["핵전쟁으로 세상이 멸망하고 난 뒤 서울은 폐허가 되었지만 몇몇 현명한 사람들은 누구에게도 들키지 않을 곳에 은신처를 만드는 데 성공했습니다. \n당신 부모님도 마찬가지였죠. 당신은 이 인구 100명도 채 안 되는 작은 마을에서 자랐습니다, 이 곳 사람들은 감자와 고구마 같은 것들을 키우며 오순도순 살아가고 있습니다."]
+    var imageArrayInTable : [String] = ["ex"]
     
-  
+  //메인 스토리 테이블뷰 업데이트하기
     
+    func scrollToBottom(){
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: self.labelArrayInTable.count-1, section: 0)
+            self.mainStoryTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+    }
    //게임 재시작하기
     @IBAction func restartGame(_ sender: Any) {
+        // 체력/멘탈/돈/페이지인덱스/능력/풀에피소드/현재 에피, 에피 내 인덱스 초기화
         santa.gameCharacter.health = 3
         santa.gameCharacter.mental = 3
         santa.gameCharacter.money = 2
@@ -123,12 +165,19 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         santa.gameCharacter.currentEpisodeIndex = 0
         santa.gameCharacter.currentEpPageIndex = 0
         abilityPanel.isHidden = true
-        self.choiceTableView.reloadData()
-        testLable.text = santa.gameCharacter.currentPage().storyText
+        
+        // 본문 테이블 뷰 텍스트,이미지 / 테이블 뷰 리로드 /
+        imageArrayInTable.removeAll()
+        labelArrayInTable.removeAll()
+    
+        mainStoryTableView.reloadData()
         tabOpenButton.isHidden = false
         abilityStringVer.removeAll()
         abilityLabel.text = "\(abilityStringVer)"
         tabOpenButton.setTitle("\(abilityStringVer)", for: .normal)
+        labelArrayInTable.append(santa.gameCharacter.currentPage().storyText)
+        imageArrayInTable.append(santa.gameCharacter.currentPage().storyImage ?? "noImage")
+        self.choiceTableView.reloadData()
 }
     
     // 페이지 업데이트
@@ -196,19 +245,29 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
        
         santa.gameCharacter.pageIndex += 1
         
-       
+            
         
         //페이지 인덱스값 올려서 넘기기 & 다음 페이지 없으면(666이면) 에피소드 넘기고 페이지인덱스값 0 만들기
         santa.gameCharacter.currentEpPageIndex = santa.gameCharacter.currentPage().choice[indexPath.row].nextPageIndex
         //에피소드 넘기기
+            
+            
         if santa.gameCharacter.currentEpPageIndex == 666 {
             santa.gameCharacter.currentEpisodeIndex = getRandomEpNumber(epList: RealFullStory, currentEpIndex: santa.gameCharacter.currentEpisodeIndex)
             santa.gameCharacter.currentEpPageIndex = 0
+            labelArrayInTable.removeAll()
+            imageArrayInTable.removeAll()
+           }
             
-        }
+                //메인 스토리 테이블뷰 속 어레이에 값 넣기
+                labelArrayInTable.append(santa.gameCharacter.currentPage().storyText)
+                imageArrayInTable.append(santa.gameCharacter.currentPage().storyImage ?? "noImage")
+                
+                scrollToBottom()
         
         // 페이지 storytext & 쪽넘버 & 능력창 String 업뎃
-        testLable.text = "\(santa.gameCharacter.currentPage().storyText)"
+        //testLable.text = "\(santa.gameCharacter.currentPage().storyText)"
+            mainStoryTableView.reloadData()
         pageNumber.text = "\(santa.gameCharacter.pageIndex)"
         tabOpenButton.setTitle("\(/*santa.gameCharacter.ability*/abilityStringVer)", for: .normal)
         abilityLabel.text = "\(/*santa.gameCharacter.ability*/abilityStringVer)"
@@ -216,16 +275,11 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         
         
 
-        //활성화하려면 능력이 필요한 선택지 활성화/비활성화 여부 결정하기
-
-        //tableView 업뎃
-        self.choiceTableView.reloadData()
-        print(santa.gameCharacter.ability)
-      
         
         
-        //tableView 업뎃
+        //tableView들 업뎃
         self.choiceTableView.reloadData()
+            self.mainStoryTableView.reloadData()
         }  else {
             
         }
@@ -238,7 +292,6 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     @IBAction func goTo2(_ sender: Any) {
     }
     
-       
 }
 
 

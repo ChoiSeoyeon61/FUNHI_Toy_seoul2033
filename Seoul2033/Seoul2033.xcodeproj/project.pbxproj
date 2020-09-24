@@ -18,6 +18,7 @@
 		BA7A7EBC24FD092800B42CA5 /* storyBoard_0.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A7EBB24FD092800B42CA5 /* storyBoard_0.swift */; };
 		BA7A7EBE24FD093D00B42CA5 /* storyBoard_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A7EBD24FD093D00B42CA5 /* storyBoard_2.swift */; };
 		BA7A7EC224FD0D6200B42CA5 /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A7EC124FD0D6200B42CA5 /* settingViewController.swift */; };
+		BA8946DB251C713E0073B6E2 /* storyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8946DA251C713E0073B6E2 /* storyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		BA7A7EBB24FD092800B42CA5 /* storyBoard_0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyBoard_0.swift; sourceTree = "<group>"; };
 		BA7A7EBD24FD093D00B42CA5 /* storyBoard_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyBoard_2.swift; sourceTree = "<group>"; };
 		BA7A7EC124FD0D6200B42CA5 /* settingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
+		BA8946DA251C713E0073B6E2 /* storyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				BA7A7EB224FCE0A600B42CA5 /* LaunchScreen.storyboard */,
 				BA7A7EB524FCE0A600B42CA5 /* Info.plist */,
 				BA4E3C3825008F790080B174 /* dataModel.swift */,
+				BA8946DA251C713E0073B6E2 /* storyTableViewCell.swift */,
 				BA7A7EAB24FCE0A500B42CA5 /* MainViewController.swift */,
 				45E852292502263D00C3F9A1 /* ChoiceTableViewCell.swift */,
 				BA7A7EBB24FD092800B42CA5 /* storyBoard_0.swift */,
@@ -160,6 +163,7 @@
 				BA7A7EA824FCE0A500B42CA5 /* AppDelegate.swift in Sources */,
 				BA7A7EAA24FCE0A500B42CA5 /* SceneDelegate.swift in Sources */,
 				BA7A7EC224FD0D6200B42CA5 /* settingViewController.swift in Sources */,
+				BA8946DB251C713E0073B6E2 /* storyTableViewCell.swift in Sources */,
 				BA4E3C3925008F790080B174 /* dataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
