@@ -516,7 +516,7 @@
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <image name="x버튼" width="577" height="553"/>
-        <image name="모험재시작버튼" width="1319" height="615"/>
+        <image name="모험재시작버튼" width="659.5" height="307.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
