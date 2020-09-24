@@ -438,11 +438,65 @@
                         <outlet property="tabCloseButton" destination="3ip-mJ-oWD" id="rR1-NS-SUm"/>
                         <outlet property="tabOpenButton" destination="wHN-qC-TEL" id="eqt-iT-F11"/>
                         <outlet property="testLable" destination="h9I-3O-eal" id="04z-P7-Uod"/>
+                        <segue destination="zak-Sn-mwz" kind="show" identifier="goToARView" id="P6j-lf-zeH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1Q4-ee-7tV">
+            <objects>
+                <viewController id="zak-Sn-mwz" customClass="ARViewController" customModule="Seoul2033" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LD9-dw-vK6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccv-9r-ViF">
+                                <rect key="frame" x="0.0" y="86" width="414" height="716"/>
+                            </arView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLz-1i-OYO">
+                                <rect key="frame" x="0.0" y="48" width="414" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="oit-2P-jXG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJl-Ut-n10">
+                                <rect key="frame" x="184" y="830" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="arButtonAction:" destination="zak-Sn-mwz" eventType="touchUpInside" id="7OJ-uW-UBa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0RT-LJ-aYh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ccv-9r-ViF" firstAttribute="top" secondItem="0RT-LJ-aYh" secondAttribute="top" constant="42" id="ErH-4V-SWD"/>
+                            <constraint firstItem="0RT-LJ-aYh" firstAttribute="bottom" secondItem="ccv-9r-ViF" secondAttribute="bottom" constant="60" id="Ldl-BY-RQ5"/>
+                            <constraint firstItem="ccv-9r-ViF" firstAttribute="trailing" secondItem="0RT-LJ-aYh" secondAttribute="trailing" id="RxP-aZ-gbD"/>
+                            <constraint firstItem="bLz-1i-OYO" firstAttribute="top" secondItem="0RT-LJ-aYh" secondAttribute="top" constant="4" id="T5c-v5-Yde"/>
+                            <constraint firstItem="0RT-LJ-aYh" firstAttribute="bottom" secondItem="NJl-Ut-n10" secondAttribute="bottom" constant="2" id="UGr-Y5-Nk6"/>
+                            <constraint firstItem="bLz-1i-OYO" firstAttribute="leading" secondItem="0RT-LJ-aYh" secondAttribute="leading" id="XTU-xi-qRU"/>
+                            <constraint firstItem="0RT-LJ-aYh" firstAttribute="trailing" secondItem="bLz-1i-OYO" secondAttribute="trailing" id="jmb-Ew-LT4"/>
+                            <constraint firstItem="ccv-9r-ViF" firstAttribute="leading" secondItem="0RT-LJ-aYh" secondAttribute="leading" id="sYd-gO-yBU"/>
+                            <constraint firstItem="NJl-Ut-n10" firstAttribute="centerX" secondItem="LD9-dw-vK6" secondAttribute="centerX" id="wmA-54-ab9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Cs-sm-RlM"/>
+                    <connections>
+                        <outlet property="arButtonLable" destination="NJl-Ut-n10" id="06f-4f-YV7"/>
+                        <outlet property="arLable" destination="bLz-1i-OYO" id="vVw-UV-EJL"/>
+                        <outlet property="arView" destination="ccv-9r-ViF" id="E72-RM-De4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZC0-BD-0qL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="935"/>
         </scene>
         <!--Story Board2-->
         <scene sceneID="gyk-xC-82I">

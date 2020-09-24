@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4552CBD3251CF44800E91AD2 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552CBD2251CF44800E91AD2 /* ARViewController.swift */; };
+		4552CBD6251CF49D00E91AD2 /* WoodAR.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4552CBD5251CF49D00E91AD2 /* WoodAR.rcproject */; };
 		45E8522A2502263D00C3F9A1 /* ChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E852292502263D00C3F9A1 /* ChoiceTableViewCell.swift */; };
 		BA4E3C3925008F790080B174 /* dataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E3C3825008F790080B174 /* dataModel.swift */; };
 		BA7A7EA824FCE0A500B42CA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A7EA724FCE0A500B42CA5 /* AppDelegate.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4552CBD2251CF44800E91AD2 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		4552CBD5251CF49D00E91AD2 /* WoodAR.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = WoodAR.rcproject; sourceTree = "<group>"; };
 		45E852292502263D00C3F9A1 /* ChoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceTableViewCell.swift; sourceTree = "<group>"; };
 		BA4E3C3825008F790080B174 /* dataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataModel.swift; sourceTree = "<group>"; };
 		BA7A7EA424FCE0A500B42CA5 /* Seoul2033.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seoul2033.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +74,7 @@
 				BA7A7EA924FCE0A500B42CA5 /* SceneDelegate.swift */,
 				BA7A7EAD24FCE0A500B42CA5 /* Main.storyboard */,
 				BA7A7EB024FCE0A600B42CA5 /* Assets.xcassets */,
+				4552CBD5251CF49D00E91AD2 /* WoodAR.rcproject */,
 				BA7A7EB224FCE0A600B42CA5 /* LaunchScreen.storyboard */,
 				BA7A7EB524FCE0A600B42CA5 /* Info.plist */,
 				BA4E3C3825008F790080B174 /* dataModel.swift */,
@@ -78,6 +83,7 @@
 				BA7A7EBB24FD092800B42CA5 /* storyBoard_0.swift */,
 				BA7A7EBD24FD093D00B42CA5 /* storyBoard_2.swift */,
 				BA7A7EC124FD0D6200B42CA5 /* settingViewController.swift */,
+				4552CBD2251CF44800E91AD2 /* ARViewController.swift */,
 			);
 			path = Seoul2033;
 			sourceTree = "<group>";
@@ -156,8 +162,10 @@
 				BA7A7EAC24FCE0A500B42CA5 /* MainViewController.swift in Sources */,
 				BA7A7EBE24FD093D00B42CA5 /* storyBoard_2.swift in Sources */,
 				45E8522A2502263D00C3F9A1 /* ChoiceTableViewCell.swift in Sources */,
+				4552CBD3251CF44800E91AD2 /* ARViewController.swift in Sources */,
 				BA7A7EBC24FD092800B42CA5 /* storyBoard_0.swift in Sources */,
 				BA7A7EA824FCE0A500B42CA5 /* AppDelegate.swift in Sources */,
+				4552CBD6251CF49D00E91AD2 /* WoodAR.rcproject in Sources */,
 				BA7A7EAA24FCE0A500B42CA5 /* SceneDelegate.swift in Sources */,
 				BA7A7EC224FD0D6200B42CA5 /* settingViewController.swift in Sources */,
 				BA4E3C3925008F790080B174 /* dataModel.swift in Sources */,

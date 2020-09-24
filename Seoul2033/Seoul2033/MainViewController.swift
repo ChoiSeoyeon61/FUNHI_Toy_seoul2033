@@ -116,10 +116,13 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     // 페이지 업데이트
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
+        
         let santaNeed = santa.gameCharacter.currentPage().choice[indexPath.row].needAbility
         if santaNeed == [] || Seoul2033.checkHaveNeedAbility(needAbilitys: santaNeed, myAbilitys: santa.gameCharacter.ability) == true {
             
-      
+            if santa.gameCharacter.currentPage().storyText == "목자재를 치워봅시다."  {
+                performSegue(withIdentifier: "goToARView", sender: nil)
+            }
         // 체력 / 멘탈 / 돈 데이터 업뎃
         santa.gameCharacter.health += santa.gameCharacter.currentPage().choice[indexPath.row].health
         santa.gameCharacter.mental += santa.gameCharacter.currentPage().choice[indexPath.row].mental
