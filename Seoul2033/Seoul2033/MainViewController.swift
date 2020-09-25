@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
- 
+   
     
-        //섹션 : 1개
+    override func viewWillAppear(_ animated: Bool) {
+        mainStoryTableView.allowsSelection = false
+        
+    }
+ //섹션 : 1개
         func numberOfSections(in tableView: UITableView) -> Int {
             return 1
          }
@@ -37,7 +42,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
                 let storyCell = tableView.dequeueReusableCell(withIdentifier: "storyCell", for: indexPath) as! storyTableViewCell
                 let storyLine: String = labelArrayInTable[indexPath.row]
                 let storyImage: String = imageArrayInTable[indexPath.row]
-                
+                storyCell.storyLabelUpdate(size: santa.setting.fontSize)
                 storyCell.update(image: storyImage, text: storyLine)
                  cellToReturn = storyCell
                 
@@ -49,7 +54,12 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     //            }
                 let cell = tableView.dequeueReusableCell(withIdentifier: "choiceCell") as! ChoiceTableViewCell
                 cell.choiceLable.text = list.choiceText
+
                 cell.choiceLable.font = UIFont(name: "KoPubWorld Dotum_Pro Bold", size: 15)
+
+                cell.choiceLabelUpdate()
+                
+
                 cellToReturn = cell
             }
             return cellToReturn
@@ -75,8 +85,6 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var mentalImage: UIImageView!
     @IBOutlet weak var moneyImage: UIImageView!
     @IBOutlet weak var pageNumber: UILabel!
-    
-    @IBOutlet weak var PagescrollView: UIScrollView!
     @IBOutlet weak var choiceTableView: UITableView!
     @IBOutlet weak var healthLabel: UILabel!
     @IBOutlet weak var mentalLable: UILabel!
@@ -86,6 +94,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     @IBOutlet var abilityPanel: UIView!
     @IBOutlet var abilityLabel: UILabel!
     @IBOutlet var mainStoryTableView: UITableView!
+    
     
     
     override func viewDidLoad() {
@@ -182,6 +191,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         tabOpenButton.setTitle("\(abilityStringVer)", for: .normal)
         labelArrayInTable.append(santa.gameCharacter.currentPage().storyText)
         imageArrayInTable.append(santa.gameCharacter.currentPage().storyImage ?? "noImage")
+        mainStoryTableView.reloadData()
         self.choiceTableView.reloadData()
 }
     
@@ -201,8 +211,17 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         santa.gameCharacter.mental += santa.gameCharacter.currentPage().choice[indexPath.row].mental
         santa.gameCharacter.money += santa.gameCharacter.currentPage().choice[indexPath.row].money
         
+            if santa.gameCharacter.currentPage().choice[indexPath.row].health < 0{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            } else if santa.gameCharacter.currentPage().choice[indexPath.row].mental < 0{
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            } else if santa.gameCharacter.currentPage().choice[indexPath.row].money < 0{
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            }
+            
         // 위 세 개 3 이상 넘어가는 것 방지하기
         limitHpMtMoney()
+            
         
         // 체력 / 멘탈 / 돈 이미지 업뎃
         healthImage.image = UIImage(named: "health\(santa.gameCharacter.health)")
@@ -283,9 +302,21 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         pageNumber.text = "\(santa.gameCharacter.pageIndex)"
         tabOpenButton.setTitle("\(/*santa.gameCharacter.ability*/abilityStringVer)", for: .normal)
         abilityLabel.text = "\(/*santa.gameCharacter.ability*/abilityStringVer)"
-
-        
-        
+        //데이터 저장
+            //최대 페이지 저장하기
+            if santa.maxPage < santa.gameCharacter.pageIndex{
+                santa.maxPage = santa.gameCharacter.pageIndex
+                print("현재 최대 페이지 장수는 \(santa.maxPage)")
+            }
+            //최대 아이템 수 저장하기
+            if santa.maxAbility < santa.gameCharacter.ability.count{
+                santa.maxAbility = santa.gameCharacter.ability.count
+                print("현재 최대 능력 갯수는 \(santa.maxAbility)")
+            }
+            //게임 오버 구현하기 + 죽은 횟수 저장하기
+            /*
+             santa.totalDying += 1
+             */
 
         
         

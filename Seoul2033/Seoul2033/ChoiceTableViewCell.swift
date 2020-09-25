@@ -24,12 +24,11 @@ class ChoiceTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        choiceLable.font = UIFont(name: choiceLable.font.fontName, size: CGFloat(santa.setting.fontSize))
         // Configure the view for the selected state
     }
-
-    @IBAction func ChoiceAction(_ sender: Any) {
-        
+    func choiceLabelUpdate(){
+        choiceLable.font = UIFont(name: choiceLable.font.fontName, size: CGFloat(santa.setting.fontSize))
     }
     // 섹션개수
     
