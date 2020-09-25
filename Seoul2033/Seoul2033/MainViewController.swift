@@ -49,7 +49,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     //            }
                 let cell = tableView.dequeueReusableCell(withIdentifier: "choiceCell") as! ChoiceTableViewCell
                 cell.choiceLable.text = list.choiceText
-                
+                cell.choiceLable.font = UIFont(name: "KoPubWorld Dotum_Pro Bold", size: 15)
                 cellToReturn = cell
             }
             return cellToReturn
@@ -94,12 +94,17 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         self.choiceTableView.delegate = self
         self.mainStoryTableView.dataSource = self
         self.mainStoryTableView.delegate = self
+        // 글꼴
+        
+        
+        
         
         // 체력 / 멘탈 / 돈 글자 지정
         healthLabel.text = "체력"
         mentalLable.text = "멘탈"
         moneyLable.text = "돈"
         
+    
         // 게임 본문 & 쪽넘버 & 능력창 String 업뎃
         //testLable.text = santa.gameCharacter.currentPage().storyText
         mainStoryTableView.reloadData()
