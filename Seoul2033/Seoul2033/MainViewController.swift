@@ -9,7 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
- 
+   
+    
+    override func viewWillAppear(_ animated: Bool) {
+        mainStoryTableView.allowsSelection = false
+        
+    }
     
         //섹션 : 1개
         func numberOfSections(in tableView: UITableView) -> Int {
@@ -37,7 +42,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
                 let storyCell = tableView.dequeueReusableCell(withIdentifier: "storyCell", for: indexPath) as! storyTableViewCell
                 let storyLine: String = labelArrayInTable[indexPath.row]
                 let storyImage: String = imageArrayInTable[indexPath.row]
-                
+                storyCell.storyLabelUpdate(size: santa.setting.fontSize)
                 storyCell.update(image: storyImage, text: storyLine)
                  cellToReturn = storyCell
                 
@@ -49,6 +54,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     //            }
                 let cell = tableView.dequeueReusableCell(withIdentifier: "choiceCell") as! ChoiceTableViewCell
                 cell.choiceLable.text = list.choiceText
+                cell.choiceLabelUpdate()
                 
                 cellToReturn = cell
             }
@@ -86,6 +92,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     @IBOutlet var abilityPanel: UIView!
     @IBOutlet var abilityLabel: UILabel!
     @IBOutlet var mainStoryTableView: UITableView!
+    
     
     
     override func viewDidLoad() {
@@ -278,9 +285,21 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         pageNumber.text = "\(santa.gameCharacter.pageIndex)"
         tabOpenButton.setTitle("\(/*santa.gameCharacter.ability*/abilityStringVer)", for: .normal)
         abilityLabel.text = "\(/*santa.gameCharacter.ability*/abilityStringVer)"
-
-        
-        
+        //데이터 저장
+            //최대 페이지 저장하기
+            if santa.maxPage < santa.gameCharacter.pageIndex{
+                santa.maxPage = santa.gameCharacter.pageIndex
+                print("현재 최대 페이지 장수는 \(santa.maxPage)")
+            }
+            //최대 아이템 수 저장하기
+            if santa.maxAbility < santa.gameCharacter.ability.count{
+                santa.maxAbility = santa.gameCharacter.ability.count
+                print("현재 최대 능력 갯수는 \(santa.maxAbility)")
+            }
+            //게임 오버 구현하기 + 죽은 횟수 저장하기
+            /*
+             santa.totalDying += 1
+             */
 
         
         

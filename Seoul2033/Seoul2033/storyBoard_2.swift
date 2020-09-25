@@ -10,16 +10,41 @@ import UIKit
 
 class storyBoard_2: UIViewController {
 
+    //Outlet 모음
+    @IBOutlet var deathAmount: UILabel!
+    @IBOutlet var currentCookie: UILabel!
+    @IBOutlet var maximumPages: UILabel!
+    @IBOutlet var maximumItems: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        checkCookieAmount(cookie: santa.cookie)
+        checkDeathAmount(death: santa.totalDying)
+        checkMaxAbility(ability: santa.maxAbility)
+        checkMaxPageAmount(page: santa.maxPage)
+    }
+    
     @IBAction func xButtonClicked2(_ sender: Any) {
          self.navigationController?.popViewController(animated: true)
     }
+    //쿠키 텍스트로 표시하기
+    func checkCookieAmount(cookie: Int){
+        currentCookie.text = String(cookie)
+    }
+    func checkMaxPageAmount(page: Int){
+        maximumPages.text = String(page)
+    }
+    func checkDeathAmount(death : Int){
+        deathAmount.text = String(death)
+    }
+    func checkMaxAbility(ability : Int){
+        maximumItems.text = String(ability)
+    }
     
-
     /*
     // MARK: - Navigation
 

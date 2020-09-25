@@ -115,7 +115,7 @@ struct User {
     var cookie: Int
     var maxPage: Int
     var maxAbility: Int
-    let setting : Setting
+    var setting : Setting
     
 }
 //ability Lable 배열
@@ -124,7 +124,7 @@ struct User {
 struct Setting{
     var isVibrate : Bool = true
     var fontSize : Int = 15
-    var rowSpacig : Int = 28
+    var rowSpacing : Int = 28
 }
 
 // 에피 랜덤으로 넘기는 함수
@@ -287,7 +287,7 @@ var truckSaleEP: [Page] = [
     
 ]
 
-        
+//let dyingEvent : [Page] = [Page(index: 1, storyText: "정신적 스트레스로 죽었다...", storyImage: nil, choice: Choice(choiceText: "다시 시작하기", ability: nil, abilityGive: false, health: nil, mental: nil, money: nil, needAbility: nil, nextPageIndex: nil), endEpisodeNumber: <#T##Int#>)]
 
 
 
