@@ -139,6 +139,10 @@ func getRandomEpNumber(epList: [[Page]], currentEpIndex: Int ) -> Int {
     currentEP = RealFullStory[epIndex]
     return epIndex
 }
+
+
+// 전역변수 함수 내부에서 덜 쓰도록 파라미터 적극적으로 활용하기. a
+
 // nextPageIndex 랜덤값 리턴하는 함수
 func getRandomPageNumber(randomStartNum : Int, randomFinishNum: Int ) -> Int {
     let newNextPageIndex: Int = Int.random(in: randomStartNum...randomFinishNum)
@@ -163,10 +167,20 @@ func checkHaveNeedAbility(needAbilitys: [Ability], myAbilitys: [Ability]) -> Boo
     }
     return haveAbility
 }
-// 전역변수 함수 내부에서 덜 쓰도록 파라미터 적극적으로 활용하기. a
 
+// 체력, 멘탈, 돈 3 이상 넘어가는 것 방지하기
 
-// 게임 플레이시 나오는 텍스트 페이지 각각에 대한 스트럭처. 텍스트, 이미지(있을 수도 없을 수도 이씀.), 선택지(최대 3개) 로 구성
+func limitHpMtMoney() {
+    if santa.gameCharacter.health > 3 {
+        santa.gameCharacter.health = 3
+    }
+    if santa.gameCharacter.mental > 3 {
+        santa.gameCharacter.mental = 3
+    }
+    if santa.gameCharacter.money > 3 {
+        santa.gameCharacter.money = 3
+    }
+}
 
 
 //--------------------------------여기부터 인스턴스---------------------------------------
@@ -212,14 +226,28 @@ var woodEP: [Page] = [
                   Choice(choiceText: "그냥 간다", ability: [], abilityGive: true, health: 0, mental: 0, money: 0,  needAbility: [],nextPageIndex: 2)
             ], endEpisodeNumber: 1),
 
-        Page(index: 1, storyText: "운동을 좀 헤둘 걸 그랬나요? 당신은 낑낑대며 목재 더미와 씨름하다가 그만 힘을 잘못 줘서 허리에 큰 부담이 오고 말았습니다. 한동안 걷기 힘들 정도로 고통이 상당합니다. 당신은 나무 더미를 향해 저주를 퍼붓다가 이내 포기합니다..", storyImage: nil, choice: [
-          Choice(choiceText: "다음", ability: [], abilityGive: true, health: 0, mental: 0, money: 0, needAbility: [], nextPageIndex: 666)
-        ], endEpisodeNumber: 666),
+        Page(index: 1, storyText: "목자재를 치워봅시다.", storyImage: nil, choice: [
+               Choice(choiceText: "다음", ability: [], abilityGive: true, health: 0, mental: 0, money: 0, needAbility: [], nextPageIndex: 2)
+               ], endEpisodeNumber: 666),
+        Page(index: 1, storyText: "목재에 깔려있던 것은 바로..!", storyImage: nil, choice: [
+               Choice(choiceText: "열쇠였습니다.", ability: [], abilityGive: true, health: 0, mental: 0, money: 0, needAbility: [], nextPageIndex: 3),
+               Choice(choiceText: "금괴였습니다.", ability: [], abilityGive: true, health: 0, mental: 0, money: 3, needAbility: [], nextPageIndex: 4),
+               Choice(choiceText: "벌레였습니다.", ability: [], abilityGive: true, health: 0, mental: 0, money: 0, needAbility: [], nextPageIndex: 5)], endEpisodeNumber: 0),
+        Page(index: 0, storyText: "아쉽게도 깔려있던 그것은 열쇠가 아니었습니다.. 당신은 발걸음을 돌립니다.",  storyImage: nil, choice: [
+               Choice(choiceText: "다음", ability: [], abilityGive: true, health: 0, mental: 0,  money: 0, needAbility: [], nextPageIndex: 666)
+               ], endEpisodeNumber: 666),
+        Page(index: 0, storyText: "세상에나! 깔려있던 그것은 다름아닌 금괴였습니다. 당신은 지갑을 가득히 채워 떠납니다.", storyImage: nil, choice: [
+               Choice(choiceText: "다음", ability: [], abilityGive: true, health: 0, mental: 0,  money: 0, needAbility: [], nextPageIndex: 666)
+               ], endEpisodeNumber: 666),
+        Page(index: 0, storyText: "아쉽게도 깔려있던 그것은 벌레가 아니었습니다.. 당신은 발걸음을 돌립니다.", storyImage: nil, choice: [
+               Choice(choiceText: "다음", ability: [], abilityGive: true, health: 0, mental: 0,  money: 0, needAbility: [], nextPageIndex: 666)
+               ], endEpisodeNumber: 666),
+           
+           Page(index: 1, storyText: "당신은 발걸음을 돌립니다.", storyImage: nil, choice: [
+               Choice(choiceText: "다음", ability: [], abilityGive: true, health: 0, mental: 0,  money: 0, needAbility: [], nextPageIndex: 666)
+               ], endEpisodeNumber: 666)
+   ]
 
-        Page(index: 1, storyText: "당신은 발걸음을 돌립니다.", storyImage: nil, choice: [
-            Choice(choiceText: "다음", ability: [], abilityGive: true, health: 0, mental: 0,  money: 0, needAbility: [], nextPageIndex: 666)
-        ], endEpisodeNumber: 666)
-]
 
 var truckSaleEP: [Page] = [
     

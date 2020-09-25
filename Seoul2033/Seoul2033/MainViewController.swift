@@ -186,11 +186,18 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         let santaNeed = santa.gameCharacter.currentPage().choice[indexPath.row].needAbility
         if santaNeed == [] || Seoul2033.checkHaveNeedAbility(needAbilitys: santaNeed, myAbilitys: santa.gameCharacter.ability) == true {
             
+        // ar 나올 페이지 지정하고, 해당 페이지는 AR뷰컨으로 푸쉬하기
+        if santa.gameCharacter.currentPage().storyText == "목자재를 치워봅시다."  {
+                           performSegue(withIdentifier: "goToARView", sender: nil)
+                       }
       
         // 체력 / 멘탈 / 돈 데이터 업뎃
         santa.gameCharacter.health += santa.gameCharacter.currentPage().choice[indexPath.row].health
         santa.gameCharacter.mental += santa.gameCharacter.currentPage().choice[indexPath.row].mental
         santa.gameCharacter.money += santa.gameCharacter.currentPage().choice[indexPath.row].money
+        
+        // 위 세 개 3 이상 넘어가는 것 방지하기
+        limitHpMtMoney()
         
         // 체력 / 멘탈 / 돈 이미지 업뎃
         healthImage.image = UIImage(named: "health\(santa.gameCharacter.health)")

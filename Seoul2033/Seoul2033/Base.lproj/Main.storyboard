@@ -316,7 +316,7 @@
                                     <constraint firstAttribute="width" constant="354" id="q7u-c3-s40"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="storyCell" rowHeight="381" id="0xL-GC-PkB" customClass="storyTableViewCell" customModule="tableViewExercise" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="storyCell" rowHeight="381" id="0xL-GC-PkB" customClass="storyTableViewCell" customModule="Seoul2033" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="354" height="381"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0xL-GC-PkB" id="xZI-E6-hGc">
@@ -483,11 +483,61 @@
                         <outlet property="pageNumber" destination="pM3-Qx-15M" id="L8A-Q4-QOd"/>
                         <outlet property="tabCloseButton" destination="3ip-mJ-oWD" id="rR1-NS-SUm"/>
                         <outlet property="tabOpenButton" destination="wHN-qC-TEL" id="eqt-iT-F11"/>
+                        <segue destination="Bln-HF-Z0q" kind="show" identifier="goToARView" id="TA5-Gn-X0B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Opf-qn-HIm">
+            <objects>
+                <viewController id="Bln-HF-Z0q" customClass="ARViewController" customModule="Seoul2033" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SeT-SB-lEs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFw-Xc-ccU">
+                                <rect key="frame" x="0.0" y="68" width="414" height="753"/>
+                            </arView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNN-lK-888">
+                                <rect key="frame" x="186" y="39" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgr-wR-yPH">
+                                <rect key="frame" x="184" y="832" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="arButtonAction:" destination="Bln-HF-Z0q" eventType="touchUpInside" id="xVw-Pt-nHM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="otL-yS-E4A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CFw-Xc-ccU" firstAttribute="top" secondItem="otL-yS-E4A" secondAttribute="top" constant="24" id="Asb-gB-rZW"/>
+                            <constraint firstItem="CFw-Xc-ccU" firstAttribute="leading" secondItem="otL-yS-E4A" secondAttribute="leading" id="AtX-ck-tDB"/>
+                            <constraint firstItem="otL-yS-E4A" firstAttribute="trailing" secondItem="CFw-Xc-ccU" secondAttribute="trailing" id="Ex5-9x-Sdg"/>
+                            <constraint firstItem="Xgr-wR-yPH" firstAttribute="centerX" secondItem="SeT-SB-lEs" secondAttribute="centerX" id="ExI-wi-6Ny"/>
+                            <constraint firstItem="otL-yS-E4A" firstAttribute="bottom" secondItem="CFw-Xc-ccU" secondAttribute="bottom" constant="41" id="Hik-E1-PKY"/>
+                            <constraint firstItem="uNN-lK-888" firstAttribute="centerX" secondItem="SeT-SB-lEs" secondAttribute="centerX" id="MUB-QL-DKE"/>
+                            <constraint firstItem="Xgr-wR-yPH" firstAttribute="bottom" secondItem="otL-yS-E4A" secondAttribute="bottom" id="WVu-Nh-dh7"/>
+                            <constraint firstItem="uNN-lK-888" firstAttribute="top" secondItem="SeT-SB-lEs" secondAttribute="top" constant="39" id="pey-HB-KSs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FGl-lq-9do"/>
+                    <connections>
+                        <outlet property="arButtonLable" destination="Xgr-wR-yPH" id="0Jc-q5-Rbp"/>
+                        <outlet property="arLable" destination="uNN-lK-888" id="5Yr-AZ-mka"/>
+                        <outlet property="arView" destination="CFw-Xc-ccU" id="p1W-1R-kru"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="teD-LF-ife" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="871.875"/>
         </scene>
         <!--Story Board2-->
         <scene sceneID="gyk-xC-82I">
