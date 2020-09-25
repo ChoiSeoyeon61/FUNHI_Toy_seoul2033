@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
    
@@ -15,8 +16,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         mainStoryTableView.allowsSelection = false
         
     }
-    
-        //섹션 : 1개
+ //섹션 : 1개
         func numberOfSections(in tableView: UITableView) -> Int {
             return 1
          }
@@ -204,6 +204,14 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         santa.gameCharacter.mental += santa.gameCharacter.currentPage().choice[indexPath.row].mental
         santa.gameCharacter.money += santa.gameCharacter.currentPage().choice[indexPath.row].money
         
+            if santa.gameCharacter.currentPage().choice[indexPath.row].health < 0{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            } else if santa.gameCharacter.currentPage().choice[indexPath.row].mental < 0{
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            } else if santa.gameCharacter.currentPage().choice[indexPath.row].money < 0{
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            }
+            
         // 위 세 개 3 이상 넘어가는 것 방지하기
         limitHpMtMoney()
             
