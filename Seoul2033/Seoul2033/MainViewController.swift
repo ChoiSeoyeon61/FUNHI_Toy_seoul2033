@@ -184,6 +184,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         tabOpenButton.setTitle("\(abilityStringVer)", for: .normal)
         labelArrayInTable.append(santa.gameCharacter.currentPage().storyText)
         imageArrayInTable.append(santa.gameCharacter.currentPage().storyImage ?? "noImage")
+        mainStoryTableView.reloadData()
         self.choiceTableView.reloadData()
 }
     
@@ -205,6 +206,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         
         // 위 세 개 3 이상 넘어가는 것 방지하기
         limitHpMtMoney()
+            
         
         // 체력 / 멘탈 / 돈 이미지 업뎃
         healthImage.image = UIImage(named: "health\(santa.gameCharacter.health)")
