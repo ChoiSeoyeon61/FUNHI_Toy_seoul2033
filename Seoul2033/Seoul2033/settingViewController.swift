@@ -25,6 +25,11 @@ class settingViewController: UIViewController {
         letterSize.text = String(santa.setting.fontSize)
         exampleText.font = UIFont(name: exampleText.font.fontName, size: CGFloat(santa.setting.fontSize))
     }
+    @IBAction func initialize(_ sender: Any) {
+        santa.setting.fontSize = 15
+        letterSize.text = String(santa.setting.fontSize)
+        exampleText.font = UIFont(name: exampleText.font.fontName, size: CGFloat(santa.setting.fontSize))
+    }
     @IBAction func letterSizeMinus(_ sender: Any) {
         santa.setting.fontSize -= 1
         letterSize.text = String(santa.setting.fontSize)
