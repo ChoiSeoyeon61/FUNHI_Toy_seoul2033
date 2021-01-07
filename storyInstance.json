@@ -147,7 +147,7 @@
             {
                 "text": "이런 거 듣기 싫어.",
                 "image": "",
-                "type": "monologue",으로 변경해야 함
+                "type": "monologue",
                 "who": "tourguide",
                 "characterFace": true,
                 "achievementToUnlock": null,
@@ -158,7 +158,7 @@
             {
                 "text": "몰래 빠져나가야겠다.",
                 "image": "",
-                "type": "monologue",으로 변경해야 함
+                "type": "monologue",
                 "who": "tourguide",
                 "characterFace": false,
                 "achievementToUnlock": null,
