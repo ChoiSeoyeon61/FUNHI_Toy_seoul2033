@@ -4,7 +4,7 @@
         "chats": [
             {
                 "text": "",
-                "image": "", // 창덕궁 배경 주인공 혼자인 일러스트
+                "image": "",
                 "type": "untouchableImage",
                 "who": "danhee",
                 "characterFace": false,
@@ -93,17 +93,17 @@
         ],
         "choices": [
             {
-                "text": "...", //주인공 속마음 어떻게 하지?
+                "text": "...",
                 "likability": [],
                 "nextTextIndex": "002"
             },
             {
-                "text": "아 피곤해.",//주인공 속마음 어떻게 하지?
+                "text": "아 피곤해.",
                 "likability": [],
                 "nextTextIndex": "002"
             },
             {
-                "text": "재미없어.",//주인공 속마음 어떻게 하지?
+                "text": "재미없어.",
                 "likability": [],
                 "nextTextIndex": "002"
             }
@@ -147,7 +147,7 @@
             {
                 "text": "이런 거 듣기 싫어.",
                 "image": "",
-                "type": "monologue",//속마음으로 변경해야 함
+                "type": "monologue",으로 변경해야 함
                 "who": "tourguide",
                 "characterFace": true,
                 "achievementToUnlock": null,
@@ -158,7 +158,7 @@
             {
                 "text": "몰래 빠져나가야겠다.",
                 "image": "",
-                "type": "monologue",//속마음으로 변경해야 함
+                "type": "monologue",으로 변경해야 함
                 "who": "tourguide",
                 "characterFace": false,
                 "achievementToUnlock": null,
@@ -171,7 +171,7 @@
             {
                 "text": "",
                 "likability": [],
-                "nextTextIndex": "005" //이렇게 하면 선택지 건너뛰고 5번으로 넘어가는게 맞나?
+                "nextTextIndex": "005"
             },
             {
                 "text": "",
@@ -265,7 +265,7 @@
                 "type": "sectionHeader",
                 "who": "danhee",
                 "characterFace": false,
-                "achievementToUnlock": null, //[돈화문] 업적
+                "achievementToUnlock": null,
                 "informationToUnlock": null,
                 "gameCharacterToUnlock": null,
                 "caseToUnlock": null
@@ -317,7 +317,7 @@
                 "type": "sectionHeader",
                 "who": "danhee",
                 "characterFace": false,
-                "achievementToUnlock": null, //[돈화문] 업적
+                "achievementToUnlock": null,
                 "informationToUnlock": null,
                 "gameCharacterToUnlock": null,
                 "caseToUnlock": null
@@ -343,7 +343,7 @@
         "chats": [
             {
                 "text": "",
-                "image": "",//가브 일러스트 금천교 그리는 그림
+                "image": "",
                 "type": "untouchableImage",
                 "who": "danhee",
                 "characterFace": false,
@@ -399,7 +399,7 @@
                 "type": "sectionHeader",
                 "who": "danhee",
                 "characterFace": false,
-                "achievementToUnlock": null, //[금천교] 업적
+                "achievementToUnlock": null,
                 "informationToUnlock": null,
                 "gameCharacterToUnlock": null,
                 "caseToUnlock": null
@@ -510,11 +510,11 @@
         "chats": [
             {
                 "text": "",
-                "image": "", //가브 인정전 앞에서 그림 그림
+                "image": "",
                 "type": "untouchableImage",
                 "who": "danhee",
                 "characterFace": false,
-                "achievementToUnlock": null, //[인정전] 업적
+                "achievementToUnlock": null,
                 "informationToUnlock": null,
                 "gameCharacterToUnlock": null,
                 "caseToUnlock": null
@@ -610,7 +610,7 @@
         "id": "013",
         "chats": [
             {
-                "text": "띠링! 누군가 당신과 이야기하고 싶어 합니다.", //진동 효과와 함께
+                "text": "띠링! 누군가 당신과 이야기하고 싶어 합니다.",
                 "image": "",
                 "type": "sectionHeader",
                 "who": "danhee",
@@ -641,7 +641,7 @@
         "chats": [
             {
                 "text": "",
-                "image": "", //가브 인정전 앞에서 그림 그림
+                "image": "",
                 "type": "untouchableImage",
                 "who": "danhee",
                 "characterFace": false,
@@ -651,7 +651,7 @@
                 "caseToUnlock": null
             },
             {
-                "text": "띠링! 누군가 당신과 이야기하고 싶어 합니다.", //진동 효과와 함께
+                "text": "띠링! 누군가 당신과 이야기하고 싶어 합니다.",
                 "image": "",
                 "type": "sectionHeader",
                 "who": "danhee",
@@ -673,7 +673,7 @@
                 "caseToUnlock": null
             },
             {
-                "text": "띠링! 누군가 당신과 이야기하고 싶어 합니다.", //진동 효과와 함께
+                "text": "띠링! 누군가 당신과 이야기하고 싶어 합니다.",
                 "image": "",
                 "type": "sectionHeader",
                 "who": "danhee",
@@ -700,7 +700,7 @@
         "choiceSkip": false
     },
     {
-        "id": "015", //엔딩
+        "id": "015",
         "chats": [
             {
                 "text": "그림 그리는데 계속 방해되잖아.",
@@ -784,7 +784,7 @@
             {
                 "text": "",
                 "likability": [],
-                "nextTextIndex": "0"//엔딩
+                "nextTextIndex": "0"
             },
             {
                 "text": "",
@@ -800,7 +800,7 @@
         "chats": [
             {
                 "text": "",
-                "image": "", //휘령 일러스트
+                "image": "",
                 "type": "untouchableImage",
                 "who": "danhee",
                 "characterFace": false,
@@ -1464,12 +1464,12 @@
         ],
         "choices": [
             {
-                "text": "고민 돼.", //속마음
+                "text": "고민 돼.",
                 "likability": [],
                 "nextTextIndex": "027"
             },
             {
-                "text": "겨우 내가 뭘 할 수 있다고?", //속마음
+                "text": "겨우 내가 뭘 할 수 있다고?",
                 "likability": [],
                 "nextTextIndex": "029"
             }
