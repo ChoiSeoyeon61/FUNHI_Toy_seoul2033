@@ -1,26 +1,1737 @@
-[
-    
-        {
-            "chats": [
-                {
-                    "text": "사건을 시작하기 전에 먼저 이 사건에 대해 알려주겠다.",
-                    "image": "",
-                    "type": "onlyText",
-                    "characterFace": true
-                }
-            ],
-            "choices": [
-                {
-                    "text": "",
-                    "likability": [],
-                    "nextTextIndex": "000"
-                },
-                {
-                    "text": "",
-                    "likability": [],
-                    "nextTextIndex": "000"
-                }
-            ]
-        }
-    
+﻿[
+    {
+        "id": "001",
+        "chats": [
+            {
+                "text": "",
+                "image": "",
+                "type": "untouchableImage",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "나는 서울에 사는 평범한 학생이다.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "여기는 서울시 종로구에 있는 창덕궁.\n나는 지금 따분한 현장체험을 와 있다.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "언제나 그랬듯이 나는 친구도 없이 홀로 외로이 서 있다.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "여러분, 만나서 반가워요!",
+                "image": "",
+                "type": "onlyText",
+                "who": "tourguide",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "오늘 하루 여러분과 함께 투어를 하게 된 가이드입니다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "tourguide",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "우리는 지금 창덕궁 돈화문 앞에 와 있는데요!",
+                "image": "",
+                "type": "onlyText",
+                "who": "tourguide",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "너무 멋있지 않나요? 이 문은...",
+                "image": "",
+                "type": "onlyText",
+                "who": "tourguide",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "...",
+                "likability": [],
+                "nextTextIndex": "002"
+            },
+            {
+                "text": "아 피곤해.",
+                "likability": [],
+                "nextTextIndex": "002"
+            },
+            {
+                "text": "재미없어.",
+                "likability": [],
+                "nextTextIndex": "002"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "002",
+        "chats": [
+            {
+                "text": "여기는 일제 강점기 때 아스팔트로 덮혀서 차가 지나다녔어요.",
+                "image": "",
+                "type": "onlyText",
+                "who": "tourguide",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "하아.",
+                "likability": [],
+                "nextTextIndex": "003"
+            },
+            {
+                "text": "...",
+                "likability": [],
+                "nextTextIndex": "004"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "003",
+        "chats": [
+            {
+                "text": "이런 거 듣기 싫어.",
+                "image": "",
+                "type": "monologue",
+                "who": "tourguide",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "몰래 빠져나가야겠다.",
+                "image": "",
+                "type": "monologue",
+                "who": "tourguide",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "005"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "005"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": true
+    },
+    {
+        "id": "004",
+        "chats": [
+            {
+                "text": "우리나라 궁궐의 대문 중에서 가장 오래된 문이랍니다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "tourguide",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "창덕궁은 애석하게도 이 돈화문을 제외한 나머지 건물들은 모두 없어요.",
+                "image": "",
+                "type": "onlyText",
+                "who": "tourguide",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "그래서 지금은 터만 남아있답니다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "tourguide",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "이곳에서...",
+                "image": "",
+                "type": "onlyText",
+                "who": "tourguide",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "아 재미없어. 안 들을래.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "005"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "005"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": true
+    },
+    {
+        "id": "005",
+        "chats": [
+            {
+                "text": "나는 돈화문 안으로 들어갔다.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "생각보다 꽃이나 나무가 많네.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "이 모습을 그리면 예쁘겠다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "여기서 그려야겠다.",
+                "likability": [],
+                "nextTextIndex": "006"
+            },
+            {
+                "text": "음..그래도 좀 더 둘러보고 그릴래.",
+                "likability": [],
+                "nextTextIndex": "008"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "006",
+        "chats": [
+            {
+                "text": "봄에 오면 더 좋을 것 같네.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "danhee",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "다 그리고 나서 안으로 들어가봐야지.",
+                "likability": [],
+                "nextTextIndex": "007"
+            },
+            {
+                "text": "다 그리면 여기서 그냥 쉬고 있어야 겠다.",
+                "likability": [],
+                "nextTextIndex": "011"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "007",
+        "chats": [
+            {
+                "text": "",
+                "image": "",
+                "type": "untouchableImage",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "다 그렸다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "이제 안으로 들어가야지.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "008"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "008"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": true
+    },
+    {
+        "id": "008",
+        "chats": [
+            {
+                "text": "돌다리를 지나 앞으로 쭉 걸었는데 그곳에는 아무것도 없었다.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "엥? 이게 뭐야?",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "돌 밖에 없네.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "두 단으로 쌓여 있는 걸 보니 여기가 중심 건물이었나?",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "예전에는 어떻게 생겼을 지 궁금하다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "내 상상으로 그려보지 뭐.",
+                "likability": [],
+                "nextTextIndex": "010"
+            },
+            {
+                "text": "다른 나라랑 좀 비슷하겠지?",
+                "likability": [],
+                "nextTextIndex": "009"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "009",
+        "chats": [
+            {
+                "text": "규모를 좀 작게 그리면 되려나?",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "교과서에서 얼핏 본 것 같기도 하고..",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "그냥 내 감으로 그리지 뭐.",
+                "likability": [],
+                "nextTextIndex": "010"
+            },
+            {
+                "text": "아 몰라. 귀찮아.",
+                "likability": [],
+                "nextTextIndex": "011"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "010",
+        "chats": [
+            {
+                "text": "",
+                "image": "",
+                "type": "untouchableImage",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "011"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "011"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": true
+    },
+    {
+        "id": "011",
+        "chats": [
+            {
+                "text": "아니 그나저나 애들은 왜 이렇게 안 와?",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "내가 너무 돌아다녔나.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "슬슬 돌아가봐야겠어.",
+                "likability": [],
+                "nextTextIndex": "013"
+            },
+            {
+                "text": "다시 돌아가기도 귀찮네.",
+                "likability": [],
+                "nextTextIndex": "012"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "012",
+        "chats": [
+            {
+                "text": "기다리면 애들이 오겠지.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "013"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "013"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": true
+    },
+    {
+        "id": "013",
+        "chats": [
+            {
+                "text": "띠링! 누군가 당신과 이야기하고 싶어 합니다.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "뭐지? 확인해봐야겠다.",
+                "likability": [],
+                "nextTextIndex": "016"
+            },
+            {
+                "text": "마저 하던 거부터 할래.",
+                "likability": [],
+                "nextTextIndex": "014"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "014",
+        "chats": [
+            {
+                "text": "",
+                "image": "",
+                "type": "untouchableImage",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "띠링! 누군가 당신과 이야기하고 싶어 합니다.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "뭐야, 귀찮게.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "띠링! 누군가 당신과 이야기하고 싶어 합니다.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "도대체 뭔데 자꾸 울려!",
+                "likability": [],
+                "nextTextIndex": "016"
+            },
+            {
+                "text": "아씨 진짜! 아침부터 화나게 하네. 방해하지 마!",
+                "likability": [],
+                "nextTextIndex": "015"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "015",
+        "chats": [
+            {
+                "text": "그림 그리는데 계속 방해되잖아.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "알림을 꺼놔야겠어.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "나는 그렇게 계속 그림을 그리다가 선생님께 붙잡혔다.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "이단희! 마음대로 돌아다니지 말라고 했지!",
+                "image": "",
+                "type": "onlyText",
+                "who": "teacher",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "네...",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "그냥 또 이렇게 반복된다.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "아무것도 없는 이 곳이 며칠이 자니도 변하지 않는 것처럼 내 공허한 하루에도 변화란 없다.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "0"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "0"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": true
+    },
+    {
+        "id": "016",
+        "chats": [
+            {
+                "text": "",
+                "image": "",
+                "type": "untouchableImage",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "드디어 올 줄 알았네!",
+                "image": "",
+                "type": "onlyText",
+                "who": "unknown",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "누군가가 나에게 말을 건 순간, 모든 것이 멈췄다.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "자네를 기다리고 있었어.",
+                "image": "",
+                "type": "onlyText",
+                "who": "unknown",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "내가 기다린 시간을 알게 된다면...아마 너는 깜짝 놀랄 거다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "unknown",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "누구세요?",
+                "likability": [],
+                "nextTextIndex": "017"
+            },
+            {
+                "text": "당신 뭐야?",
+                "likability": [],
+                "nextTextIndex": "018"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "017",
+        "chats": [
+            {
+                "text": "흠흠. 나를 소개하겠네.",
+                "image": "",
+                "type": "onlyText",
+                "who": "unknown",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "나는 이곳 창덕궁의 수호신이자 조선의 신인 휘령이다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "019"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "019"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "018",
+        "chats": [
+            {
+                "text": "누군데 나한테 말을 걸어?",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "흐음....",
+                "image": "",
+                "type": "onlyText",
+                "who": "unknown",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "넌 너의 핏줄이 무색하게도 버릇이 없구나.",
+                "image": "",
+                "type": "onlyText",
+                "who": "unknown",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "아..아니 누군데 그러시냐고요.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "난 이곳을 지키는 휘령이라고 한다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "그냥 휘령님이라고 부르면 된다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "그나저나 나에게 이렇게 무례하게 군 사람이 대체 얼마만인지 모르겠구나.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "헉...죄송합니다.",
+                "likability": [],
+                "nextTextIndex": "019"
+            },
+            {
+                "text": "...",
+                "likability": [],
+                "nextTextIndex": "019"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "019",
+        "chats": [
+            {
+                "text": "그런데 왜 제게 이야기를 하시는 거죠?",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "너의 도움이 필요했으니까.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "무슨 도움이요?",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "내 힘이 너무 약해져서 이 나라를 바로 잡을 수가 없다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "그래서 네가 나를 좀 도와주어야 겠다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "그게 무슨 말인가요?",
+                "likability": [],
+                "nextTextIndex": "20"
+            },
+            {
+                "text": "네?",
+                "likability": [],
+                "nextTextIndex": "21"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "020",
+        "chats": [
+            {
+                "text": "네가 부모 잃은 자식이 된 이유도 그 때문이지.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "네..?",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "022"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "022"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": true
+    },
+    {
+        "id": "021",
+        "chats": [
+            {
+                "text": "휘령님께서 힘을 잃은 것과 나라를 바로 잡는 게 무슨 상관인데요?",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "그건 너의 부모와도 관련이 있다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "022"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "022"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": true
+    },
+    {
+        "id": "022",
+        "chats": [
+            {
+                "text": "네가 왜 부모도 없이 혼자인 줄 아느냐?",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "저야 모르죠...",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "지금 정부가 나라의 긍지를 떨어뜨린 집안이라는 이유로 명예를 떨어뜨렸어.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "그래서 너의 집안 사람들은 모두 정체를 숨기고 살아가거나 대가 끊겼다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "헉 그럴 수가...",
+                "likability": [],
+                "nextTextIndex": "023"
+            },
+            {
+                "text": "말도 안 되는 소리 하지 마세요!",
+                "likability": [],
+                "nextTextIndex": "024"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "023",
+        "chats": [
+            {
+                "text": "정말이에요..?",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "당연하지.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "내가 뭘 위해서 너한테 거짓말을 하겠느냐?",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "025"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "025"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": true
+    },
+    {
+        "id": "024",
+        "chats": [
+            {
+                "text": "너무 지어낸 티가 나는 걸요?",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "내 부모는 그냥 날 버린 거라고요!",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "네 부모는 널 위해서 그런 거야.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "네 가문을 들키지 않게 하기 위해서지.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "그래도 지금 내 상황이면 부모가 있는 게 훨씬 나을 것 같은데..",
+                "image": "",
+                "type": "monologue",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "아무튼 진짜인 지 아닌 지는 네가 직접 확인해보면 되겠지.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "025"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "025"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": true
+    },
+    {
+        "id": "025",
+        "chats": [
+            {
+                "text": "그럼 제가 어떻게 하면 되는 건데요?",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "진실을 밝히기 위해서는 조선의 유일한 핏줄인 네가 필요하다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "네가 과거로 돌아가서 부디 내 힘을 되찾아다오.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "근데 왜 제가 필요해요?",
+                "likability": [],
+                "nextTextIndex": "026"
+            },
+            {
+                "text": "그럼 과거를 바꾼다는 말인가요..?",
+                "likability": [],
+                "nextTextIndex": "030"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "026",
+        "chats": [
+            {
+                "text": "휘령님께서 그냥 되찾아오면 되는 거 아닌가요?",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "나는 이미 너무 많이 희생되어서 그럴 힘이 없어.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "국권을 위해 소수를 희생시키는 구조에 맞서야 하는데 그럴 힘이 부족하다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "하지만...",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "고민 돼.",
+                "likability": [],
+                "nextTextIndex": "027"
+            },
+            {
+                "text": "겨우 내가 뭘 할 수 있다고?",
+                "likability": [],
+                "nextTextIndex": "029"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "027",
+        "chats": [
+            {
+                "text": "나는 잠시 뜸을 들였다.",
+                "image": "",
+                "type": "sectionHeader",
+                "who": "",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "결정했어요.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "저에겐 너무 부담스러운 일이에요.",
+                "likability": [],
+                "nextTextIndex": "02"
+            },
+            {
+                "text": "걱정되긴 하지만, 그래도 해 볼게요.",
+                "likability": [],
+                "nextTextIndex": "028"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "028",
+        "chats": [
+            {
+                "text": "휴우, 그래. 정말 고맙다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "02#"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "02#"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": true
+    },
+    {
+        "id": "029",
+        "chats": [
+            {
+                "text": "그 일은 제게 너무 책임 막중한 일이에요.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "못하겠어요.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "031"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "031"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": true
+    },
+    {
+        "id": "030",
+        "chats": [
+            {
+                "text": "전..그런 일은 하기 싫어요.",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "제게는 너무 부담스러운 일인걸요...",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "031"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "031"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": true
+    },
+    {
+        "id": "031",
+        "chats": [
+            {
+                "text": "제발 부탁한다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "내 힘은 이미 바닥을 치고 있어.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "왜 힘이 사라졌는데요?",
+                "likability": [],
+                "nextTextIndex": "032"
+            },
+            {
+                "text": "그게 무슨 말씀이세요?",
+                "likability": [],
+                "nextTextIndex": "03~"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": false
+    },
+    {
+        "id": "032",
+        "chats": [
+            {
+                "text": "나는 조선을 수호하는 신이다.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "조선의 중심은 왕이라는 거, 알고 있지?",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "그리고 그 왕의 안석처는 바로 이곳 궁궐이라고.",
+                "image": "",
+                "type": "onlyText",
+                "who": "hwiryeong",
+                "characterFace": false,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            },
+            {
+                "text": "근데요?",
+                "image": "",
+                "type": "onlyText",
+                "who": "danhee",
+                "characterFace": true,
+                "achievementToUnlock": null,
+                "informationToUnlock": null,
+                "gameCharacterToUnlock": null,
+                "caseToUnlock": null
+            }
+        ],
+        "choices": [
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "031"
+            },
+            {
+                "text": "",
+                "likability": [],
+                "nextTextIndex": "031"
+            }
+        ],
+        "achievement": null,
+        "choiceSkip": true
+    }
 ]
